@@ -22,49 +22,115 @@ h5,
 h6 {
     color: #fff;
 }
-a{
+a {
     color: #fff;
     text-decoration: none;
 }
-p{
+p {
     color: #fff;
     margin: 0.5rem 0;
 }
-img{
+img {
     width: 100%;
 }
 
-.landing-page-showcase{
+.landing-page-showcase {
     position: fixed;
     width: 100%;
     height: 93vh;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
+
 }
-.landing-page-showcase-top{
+.landing-page-showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.45);
+}
+.landing-page-showcase-top {
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
     position: relative;
     height: 90px;
+    width: 100%;
+    #logo {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 167px;
+        cursor: pointer;
+    }
+    a,
+    p {
+        padding: 7px 17px;
+    }
+    @media (max-width: 1000px) {
+        #logo {
+            position: relative;
+            left: 0;
+            transform: translate(0);
+        }
+        p {
+            margin-left: auto;
+        }
+    }
+    @media (max-width: 700px) {
+        height: 75px;
+    }
+    @media (max-width: 475px) {
+        a,
+        p {
+            font-size: 0.92rem;
+        }
+        #logo {
+            width: 105px;
+            min-width: 105px;
+            margin: auto;
+        }
+    }
 }
-
-.landing-page-showcase-top img{
-    width: 170px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.landing-page-showcase-top a{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
+.landing-page-showcase-content {
+    z-index: 2;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 8rem;
+    h1 {
+        font-weight: 600;
+        font-size: 5.2rem;
+        line-height: 1.1;
+        margin: 0 0 2rem;
+    }
+    p {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.25;
+        margin: 0 0 2rem;
+    }
+    #signup-link-icon {
+        transform: translate(50%, 15%);
+        align-self: center;
+    }
 }
 
 // Buttons
-.btn{
+.btn {
     display: inline-block;
     background: map-get($colors, brightRed);
     color: #fff;
-    padding: 0.4rem 1.3rem;
+    padding: 0.5rem 1.4rem;
     font-size: 1rem;
     text-align: center;
     border: none;
@@ -73,4 +139,15 @@ img{
     outline: none;
     box-shadow: 0 1px 0 rgba(0,0,0,0.45);
     border-radius: 2px;
+    &:hover {
+        background: lighten(map-get($colors, brightRed), 5%);
+    }
+}
+.btn-rounded {
+    border-radius: 5px;
+}
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.8rem;
+    text-transform: uppercase;
 }
