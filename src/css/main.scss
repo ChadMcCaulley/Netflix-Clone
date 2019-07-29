@@ -1,6 +1,8 @@
 $font-stack: "Arial", "sans-serif";
-$colors: ( brightRed: #E50914, darkRed: #B20710);
+$colors: ( brightRed: #E50914, darkRed: #B20710, tabsBackground: #141414);
 $images: (showcaseBackground: url("../resources/images/netflix_showcase_background.jpg"));
+$landingTopBrakePoints: (logoLeft: 1000px, second: 700px, third: 475px);
+$landingShowcaseBrakePoints: (contentDown: 927px);
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,7 +11,7 @@ $images: (showcaseBackground: url("../resources/images/netflix_showcase_backgrou
 body {
     font-family: $font-stack;
     background: #000;
-    color: #999;
+    color: #fff;
 }
 ul {
     list-style: none;
@@ -34,12 +36,13 @@ img {
     width: 100%;
 }
 
+// Landing Page Top
 .landing-page-showcase {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 93vh;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
-
+    @media(max-width: map-get($landingShowcaseBrakePoints, contentDown)) {}
 }
 .landing-page-showcase::after {
     content: "";
@@ -49,7 +52,12 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.5);
+    box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
+    @media(max-width: map-get($landingShowcaseBrakePoints, contentDown)) {
+        background: rgba(0,0,0,0);
+        box-shadow: inset 0 -100px 50px 10px rgba(0,0,0,0.9);
+    }
 }
 .landing-page-showcase-top {
     z-index: 2;
@@ -71,8 +79,9 @@ img {
     p {
         padding: 7px 17px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: map-get($landingTopBrakePoints, logoLeft)) {
         #logo {
+            flex: 0 1 auto;
             position: relative;
             left: 0;
             transform: translate(0);
@@ -81,10 +90,11 @@ img {
             margin-left: auto;
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: map-get($landingTopBrakePoints, second)) {
         height: 75px;
     }
-    @media (max-width: 475px) {
+    @media (max-width: map-get($landingTopBrakePoints, third)) {
+        height: 50px;
         a,
         p {
             font-size: 0.92rem;
@@ -92,7 +102,6 @@ img {
         #logo {
             width: 105px;
             min-width: 105px;
-            margin: auto;
         }
     }
 }
@@ -121,8 +130,85 @@ img {
     }
     #signup-link-icon {
         transform: translate(50%, 15%);
-        align-self: center;
     }
+    @media(max-width: map-get($landingShowcaseBrakePoints, contentDown)) {}
+}
+
+// Landing Page Tabs
+.landing-page-tabs {
+    transform: translateY(93vh);
+    position: relative;
+    z-index: 3;
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+    background: map-get($colors, tabsBackground);
+}
+.landing-page-tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    div{
+        padding: 1.5rem 0;
+    }
+    div:hover{
+        color: #fff;
+        cursor: pointer;
+    }
+    .tab p{
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+    }
+    .tab-border {
+        border-bottom: map-get($colors, brightRed) 4px solid;
+    }
+}
+
+// tab content
+.tab-content{
+    position: relative;
+    transform: translateY(93vh);
+    padding: 3rem 0;
+}
+
+    // Tab 1 content
+    #tab-1-content .tab-1-content-inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        align-items: flex-start;
+        justify-content: center;
+        div{
+            margin-top: 2rem;
+        }
+    }
+
+    // Tab 2 content
+    #tab-2-content .tab-2-content-top{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1rem; 
+        align-items: center;
+        justify-content: center;
+    }
+    #tab-2-content .tab-2-content-bottom{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+// Container
+.container{
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
 }
 
 // Buttons
@@ -148,6 +234,31 @@ img {
 }
 .btn-xl {
     font-size: 2rem;
-    padding: 1.5rem 2.8rem;
+    padding: 1.5rem 3.2rem;
     text-transform: uppercase;
+}
+.btn-lg{
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+// TEXT
+.text-xl{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.text-lg{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.text-md{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.text-center{
+    text-align: center;
+}
+.text-dark{
+    color: #999;
 }
