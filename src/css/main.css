@@ -1,3 +1,93 @@
+.btn {
+  display: inline-block;
+  background: #E50914;
+  color: #fff;
+  padding: 0.5rem 1.4rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  outline: none;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #f6121d;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+
+.btn-xl {
+  font-size: 5rem;
+  padding: 1.5rem 3.2rem;
+  text-transform: uppercase;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.8rem 1.3rem;
+  text-transform: uppercase;
+}
+
+.btn-dark {
+  background: none;
+  border: #999 solid;
+  color: #999;
+  font-size: 1.1rem;
+  font-weight: 700;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 1rem;
+}
+
+.btn-dark:hover {
+  background: none;
+}
+
+.btn-bottom {
+  width: 100%;
+  -webkit-box-shadow: 40px 40px 100px 100px rgba(0, 0, 0, 0.7);
+          box-shadow: 40px 40px 100px 100px rgba(0, 0, 0, 0.7);
+}
+
+.text-xxl {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-xl {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.text-md {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #999;
+}
+
+.text-heavy {
+  font-weight: 700px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -39,7 +129,7 @@ img {
 }
 
 .landing-page-showcase {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 93vh;
   background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
@@ -80,8 +170,6 @@ img {
   position: absolute;
   left: 50%;
   width: 500px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
@@ -193,7 +281,7 @@ img {
   position: relative;
   height: 70vh;
   padding: 1.5rem 1rem;
-  margin: 1rem 1rem;
+  margin: 1rem;
   border-radius: 2%;
   background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
   display: -webkit-box;
@@ -229,8 +317,6 @@ img {
 }
 
 .landing-page-tabs {
-  -webkit-transform: translateY(93vh);
-          transform: translateY(93vh);
   position: relative;
   z-index: 3;
   padding-top: 1rem;
@@ -273,8 +359,6 @@ img {
 
 .tab-content {
   position: relative;
-  -webkit-transform: translateY(93vh);
-          transform: translateY(93vh);
   padding: 3rem 0;
 }
 
@@ -352,10 +436,25 @@ img {
   background: #222;
 }
 
+.error-message-container {
+  height: 100vh;
+  width: 100%;
+  background: #3d3d3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 5%;
+}
+
 .footer {
   position: relative;
-  -webkit-transform: translateY(93vh);
-          transform: translateY(93vh);
   max-width: 75%;
   margin: 1rem auto;
   overflow: auto;
@@ -402,7 +501,7 @@ img {
 }
 
 .mobile-card-container {
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
 }
 
 .navbar-bottom {
@@ -410,76 +509,22 @@ img {
   width: 100%;
   z-index: 10;
   bottom: 0;
-  padding: 5% 5%;
+  padding: 5%;
 }
 
-.btn {
-  display: inline-block;
-  background: #E50914;
-  color: #fff;
-  padding: 0.5rem 1.4rem;
-  font-size: 1rem;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  margin-right: 0.5rem;
-  outline: none;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  border-radius: 2px;
-}
-
-.btn:hover {
-  background: #f6121d;
-}
-
-.btn-rounded {
-  border-radius: 5px;
-}
-
-.btn-xl {
-  font-size: 5rem;
-  padding: 1.5rem 3.2rem;
-  text-transform: uppercase;
-}
-
-.btn-lg {
-  font-size: 1rem;
-  padding: 0.8rem 1.3rem;
-  text-transform: uppercase;
-}
-
-.btn-bottom {
+.navbar-top-simple {
+  position: relative;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
   width: 100%;
-  -webkit-box-shadow: 40px 40px 100px 100px rgba(0, 0, 0, 0.7);
-          box-shadow: 40px 40px 100px 100px rgba(0, 0, 0, 0.7);
 }
 
-.text-xxl {
-  font-size: 2.5rem;
-}
-
-.text-xl {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.text-lg {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.text-md {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-dark {
-  color: #999;
+.navbar-top-simple #logo {
+  width: 170px;
+  cursor: pointer;
 }
 
 @media (max-width: 2560px) {
@@ -609,10 +654,6 @@ img {
 }
 
 @media (max-width: 540px) {
-  .footer {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
   .footer p {
     color: #999;
   }
@@ -636,7 +677,7 @@ img {
 
 @media (max-height: 500px) {
   .landing-page-showcase-content {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 3.2rem;

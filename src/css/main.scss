@@ -1,5 +1,9 @@
+// Imports
+@import "./constants/colors";
+@import "./utilities/buttons";
+@import "./utilities/text";
+
 $font-stack: "Arial", "sans-serif";
-$colors: ( brightRed: #E50914, darkRed: #B20710, tabsBackground: #141414, mobileCards:#3d3d3d);
 $images: (showcaseBackground: url("../resources/images/netflix_showcase_background.jpg"));
 $landingBrakePoints: ( QHD: 2560px, HD: 1920px, logoLeft: 1000px, contentDown: 927px, showcase-top-smaller: 700px, mobile: 540px, mobile-small: 340px );
 
@@ -37,7 +41,7 @@ img {
 }
 
 .landing-page-showcase {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 93vh;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
@@ -66,7 +70,6 @@ img {
         position: absolute;
         left: 50%;
         width: 500px;
-        transform: translate(-50%, -50%);
         cursor: pointer;
     }
     a {
@@ -128,14 +131,13 @@ img {
         font-size: 1.2rem;
         font-weight: 600;
     }
-    .signin-mobile:active{
+    .signin-mobile:active {
         text-decoration: underline;
-
     }
 }
 
 // Mobile Landing Cards
-.mobile-selling-points-card{
+.mobile-selling-points-card {
     display: flex;
     padding: 1.5rem 1rem;
     flex-direction: column;
@@ -146,20 +148,21 @@ img {
     border-radius: 2%;
 }
 
-.background-image-container{
+.background-image-container {
     position: relative;
     height: 70vh;
     padding: 1.5rem 1rem;
-    margin: 1rem 1rem;
+    margin: 1rem;
     border-radius: 2%;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     text-align: center;
-    h3{
+    h3 {
         padding: 1rem 2rem 0;
         z-index: 2;
-    } p {
+    }
+    p {
         padding: 0 2rem;
         z-index: 2;
     }
@@ -175,10 +178,8 @@ img {
     background: linear-gradient(to bottom, rgba(0,0,0,0.8) 20%, transparent);
 }
 
-
 // Landing Page Tabs
 .landing-page-tabs {
-    transform: translateY(93vh);
     position: relative;
     z-index: 3;
     padding-top: 1rem;
@@ -211,7 +212,6 @@ img {
 // tab content
 .tab-content {
     position: relative;
-    transform: translateY(93vh);
     padding: 3rem 0;
 }
 
@@ -268,10 +268,21 @@ img {
     }
 }
 
+// Error page
+.error-message-container{
+    height: 100vh;
+    width: 100%;
+    background: map-get($colors, mobileCards);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding: 5%;
+}
+
 // Footer
 .footer {
     position: relative;
-    transform: translateY(93vh);
     max-width: 75%;
     margin: 1rem auto;
     overflow: auto;
@@ -299,82 +310,34 @@ img {
     overflow: hidden;
     padding: 0 2rem;
 }
-.container-centered{
+.container-centered {
     position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
 }
-.mobile-card-container{
-    padding: .4rem 1rem;
+.mobile-card-container {
+    padding: 0.4rem 1rem;
 }
 
 // Navbars
-.navbar-bottom{
+.navbar-bottom {
     position: fixed;
     width: 100%;
     z-index: 10;
     bottom: 0;
-    padding: 5% 5%;
+    padding: 5%;
 }
-
-// Buttons
-.btn {
-    display: inline-block;
-    background: map-get($colors, brightRed);
-    color: #fff;
-    padding: 0.5rem 1.4rem;
-    font-size: 1rem;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    outline: none;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
-    border-radius: 2px;
-    &:hover {
-        background: lighten(map-get($colors, brightRed), 5%);
-    }
-}
-.btn-rounded {
-    border-radius: 5px;
-}
-.btn-xl {
-    font-size: 5rem;
-    padding: 1.5rem 3.2rem;
-    text-transform: uppercase;
-}
-.btn-lg {
-    font-size: 1rem;
-    padding: 0.8rem 1.3rem;
-    text-transform: uppercase;
-}
-// Mobile landing page  button 
-.btn-bottom{
+.navbar-top-simple {
+    position: relative;
+    background: #000;
+    display: flex;
+    padding: 15px;
     width: 100%;
-    box-shadow: 40px 40px 100px 100px rgba(0,0,0,0.7);
-}
-// TEXT
-.text-xxl{
-    font-size: 2.5rem;
-}
-.text-xl {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-.text-lg {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-.text-md {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.text-center {
-    text-align: center;
-}
-.text-dark {
-    color: #999;
+    #logo {
+        width: 170px;
+        cursor: pointer;
+    }
 }
 
 // Media Queries
@@ -405,7 +368,7 @@ img {
             font-size: 2.2rem;
         }
     }
-    .btn-xl{
+    .btn-xl {
         font-size: 4rem;
     }
 }
@@ -437,7 +400,7 @@ img {
             font-size: 1rem;
         }
     }
-    .btn-xl{
+    .btn-xl {
         font-size: 2rem;
     }
 }
@@ -495,14 +458,11 @@ img {
     }
 }
 @media (max-width: map-get($landingBrakePoints, mobile)) {
-    .footer {
-        transform: translateY(0);
-    }
-    .footer p{
+    .footer p {
         color: #999;
     }
 }
-@media (max-height: 800px){
+@media (max-height: 800px) {
     .landing-page-showcase-content {
         margin-top: 5rem;
         h1 {
@@ -513,13 +473,13 @@ img {
             font-size: 1.5rem;
         }
     }
-    .btn-xl{
+    .btn-xl {
         font-size: 1.2rem;
     }
 }
-@media (max-height: 500px){
+@media (max-height: 500px) {
     .landing-page-showcase-content {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
         h1 {
             font-size: 3.2rem;
             line-height: 1;
@@ -541,7 +501,7 @@ img {
             font-size: 0.9rem;
         }
     }
-    .btn-xl{
+    .btn-xl {
         font-size: 1.1rem;
     }
 }
