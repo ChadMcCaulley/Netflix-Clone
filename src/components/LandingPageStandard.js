@@ -15,6 +15,10 @@ import {FaDoorOpen, FaTabletAlt, FaTags, FaTimes, FaCheck} from "react-icons/fa"
 
 const inactiveTab = "tab";
 const activeTab = "tab tab-border";
+const urls = {
+    newUser: "/sigin-new-tour",
+    existingUser: "sigin-existing"
+};
 
 class LandingPageStandard extends Component {
     constructor(props) {
@@ -40,6 +44,8 @@ class LandingPageStandard extends Component {
     render() {
         const currentTab = this.state.currentTab;
         const endOfFree = this.endOfFree();
+        const existingUser = urls.existingUser;
+        const newUser = urls.newUser;
         return (
             <div>
                 <header className="landing-page-showcase">
@@ -48,7 +54,7 @@ class LandingPageStandard extends Component {
                         <p>
                             Have an account?
                         </p>
-                        <Link to="/" className="btn btn-rounded">
+                        <Link to={existingUser} className="btn btn-rounded">
                             Sign In</Link>
                     </div>
                     <div className="landing-page-showcase-content">
@@ -56,7 +62,7 @@ class LandingPageStandard extends Component {
                             See what's next</h1>
                         <p>
                             Watch anywhere. Cancel anytime</p>
-                        <Link to="/" className="btn btn-xl">
+                        <Link to={newUser} className="btn btn-xl">
                             Try 30 Days Free
                             <IoIosArrowForward id="signup-link-icon"/></Link>
                     </div>
@@ -109,7 +115,7 @@ class LandingPageStandard extends Component {
                                             If you decide Netflix isn't for you - no problem. No commitment.
                                             Cancel online anytime.
                                         </p>
-                                        <Link to="/" className="btn btn-lg"> Try 30 Days Free</Link>
+                                        <Link to={newUser} className="btn btn-lg"> Try 30 Days Free</Link>
                                     </div>
                                     <img src={Tab_1_Image} alt="cancel anytime"/>
                                 </div>
@@ -121,7 +127,7 @@ class LandingPageStandard extends Component {
                                     <p className="text-lg">
                                        Watch TV shows and movies anytime, anywhere - personalized for you 
                                     </p>
-                                    <Link to="/" className="btn btn-lg"> Try 30 Days Free</Link>
+                                    <Link to={newUser} className="btn btn-lg"> Try 30 Days Free</Link>
                                 </div>
                                 <div className="tab-2-content-bottom">
                                     <div>
@@ -148,7 +154,7 @@ class LandingPageStandard extends Component {
                                     <p className="text-lg">
                                        Choose one plan and watch everything on Netflix.
                                     </p>
-                                    <Link to="/" className="btn btn-lg"> Try 30 Days Free</Link>
+                                    <Link to={newUser} className="btn btn-lg"> Try 30 Days Free</Link>
                                 </div>
                                 <table className="tab-3-table">
                                     <thead>

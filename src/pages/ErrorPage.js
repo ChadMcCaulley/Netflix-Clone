@@ -1,9 +1,12 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import NavbarSimple from "../components/NavbarSimple";
 
 const ErrorPage = () => {
     return (
         <div>
-            Error Page
+            <NavbarSimple/>
+            <Link to="/" className="text-xxl"> Go Back to Netflix </Link>
         </div>
     )
 }

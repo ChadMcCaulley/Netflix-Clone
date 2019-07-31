@@ -19,12 +19,12 @@ export default class LandingPageMobile extends Component {
                         <p>
                             Have an account?
                         </p>
-                        <Link to="/" className="signin-mobile">
+                        <Link to="/sigin-existing" className="signin-mobile">
                             Sign In
                         </Link>
                     </div>
                     <div className="navbar-bottom">
-                        <Link to="/" className="btn btn-lg btn-bottom">
+                        <Link to="/signin-new-tour" className="btn btn-lg btn-bottom">
                             Try 30 Days Free
                         </Link>
                     </div>
