@@ -17,7 +17,7 @@ const inactiveTab = "tab";
 const activeTab = "tab tab-border";
 const urls = {
     newUser: "/sigin-new-tour",
-    existingUser: "sigin-existing"
+    existingUser: "signin-existing"
 };
 
 class LandingPageStandard extends Component {
