@@ -1,17 +1,8 @@
 $font-stack: "Arial", "sans-serif";
-$colors: ( brightRed: #E50914, darkRed: #B20710, tabsBackground: #141414);
+$colors: ( brightRed: #E50914, darkRed: #B20710, tabsBackground: #141414, mobileCards:#3d3d3d);
 $images: (showcaseBackground: url("../resources/images/netflix_showcase_background.jpg"));
-$landingBrakePoints: (
-    QHD: 2560px, 
-    HD: 1920px, 
-    logoLeft: 1000px, 
-    contentDown: 927px, 
-    second: 700px,
-    mobile: 475px,
-    mobileMaxWidth: 500px, 
-    mobileHeight: 700px,
-    mobileHeightTall: 900px
-);
+$landingBrakePoints: ( QHD: 2560px, HD: 1920px, logoLeft: 1000px, contentDown: 927px, showcase-top-smaller: 700px, mobile: 540px, mobile-small: 340px );
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -45,13 +36,11 @@ img {
     width: 100%;
 }
 
-// Landing Page Top
 .landing-page-showcase {
     position: absolute;
     width: 100%;
     height: 93vh;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
-    @media(max-width: map-get($landingBrakePoints, contentDown)) {}
 }
 .landing-page-showcase::after {
     content: "";
@@ -63,10 +52,6 @@ img {
     z-index: 1;
     background: rgba(0,0,0,0.5);
     box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
-    @media(max-width: map-get($landingBrakePoints, contentDown)) {
-        background: rgba(0,0,0,0);
-        box-shadow: inset 0 -100px 50px 10px rgba(0,0,0,0.9);
-    }
 }
 .landing-page-showcase-top {
     z-index: 2;
@@ -104,17 +89,17 @@ img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 30rem;
     h1 {
         font-weight: 600;
-        font-size: 5.2rem;
+        font-size: 11rem;
         line-height: 1.1;
         margin: 0 0 2rem;
     }
     p {
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 4rem;
         line-height: 1.25;
         margin: 0 0 2rem;
     }
@@ -122,6 +107,74 @@ img {
         transform: translate(50%, 15%);
     }
 }
+
+// Mobile Landing Top 
+.landing-page-mobile-top {
+    height: 70px;
+    padding: 20px 10px 0;
+    display: flex;
+    width: 100%;
+    #logo {
+        width: 110px;
+        align-self: center;
+    }
+    p {
+        margin-left: auto;
+        padding: 0 7px;
+        font-size: 0.8rem;
+    }
+    .signin-mobile {
+        padding-top: 5px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .signin-mobile:active{
+        text-decoration: underline;
+
+    }
+}
+
+// Mobile Landing Cards
+.mobile-selling-points-card{
+    display: flex;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: map-get($colors, mobileCards);
+    border-radius: 2%;
+}
+
+.background-image-container{
+    position: relative;
+    height: 70vh;
+    padding: 1.5rem 1rem;
+    margin: 1rem 1rem;
+    border-radius: 2%;
+    background: map-get($images, showcaseBackground) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h3{
+        padding: 1rem 2rem 0;
+        z-index: 2;
+    } p {
+        padding: 0 2rem;
+        z-index: 2;
+    }
+}
+.background-image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 20%, transparent);
+}
+
 
 // Landing Page Tabs
 .landing-page-tabs {
@@ -246,6 +299,24 @@ img {
     overflow: hidden;
     padding: 0 2rem;
 }
+.container-centered{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.mobile-card-container{
+    padding: .4rem 1rem;
+}
+
+// Navbars
+.navbar-bottom{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    padding: 5% 5%;
+}
 
 // Buttons
 .btn {
@@ -269,7 +340,7 @@ img {
     border-radius: 5px;
 }
 .btn-xl {
-    font-size: 2rem;
+    font-size: 5rem;
     padding: 1.5rem 3.2rem;
     text-transform: uppercase;
 }
@@ -278,8 +349,15 @@ img {
     padding: 0.8rem 1.3rem;
     text-transform: uppercase;
 }
-
+// Mobile landing page  button 
+.btn-bottom{
+    width: 100%;
+    box-shadow: 40px 40px 100px 100px rgba(0,0,0,0.7);
+}
 // TEXT
+.text-xxl{
+    font-size: 2.5rem;
+}
 .text-xl {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -301,11 +379,21 @@ img {
 
 // Media Queries
 @media (max-width: map-get($landingBrakePoints, QHD)) {
+    .landing-page-showcase-content {
+        margin-top: 18rem;
+        h1 {
+            font-size: 8em;
+            line-height: 1;
+        }
+        p {
+            font-size: 3rem;
+        }
+    }
     .landing-page-showcase-top {
         height: 150px;
         #logo {
             transform: translate(-50%, -50%);
-            width: 350px;
+            width: 400px;
         }
         a {
             border-radius: 5px;
@@ -317,8 +405,22 @@ img {
             font-size: 2.2rem;
         }
     }
+    .btn-xl{
+        font-size: 4rem;
+    }
 }
 @media (max-width: map-get($landingBrakePoints, HD)) {
+    .landing-page-showcase-content {
+        margin-top: 8rem;
+        h1 {
+            font-size: 5.2rem;
+            line-height: 1.1;
+        }
+        p {
+            font-size: 2rem;
+            line-height: 1.25;
+        }
+    }
     .landing-page-showcase-top {
         height: 90px;
         #logo {
@@ -335,8 +437,15 @@ img {
             font-size: 1rem;
         }
     }
+    .btn-xl{
+        font-size: 2rem;
+    }
 }
 @media(max-width: map-get($landingBrakePoints, contentDown)) {
+    .landing-page-showcase::after {
+        background: rgba(0,0,0,0);
+        box-shadow: inset 0 -100px 50px 10px rgba(0,0,0,0.9);
+    }
     .hide-sm {
         display: none;
     }
@@ -380,50 +489,59 @@ img {
         }
     }
 }
-@media (max-width: map-get($landingBrakePoints, second)) {
+@media (max-width: map-get($landingBrakePoints, showcase-top-smaller)) {
     .landing-page-showcase-top {
         height: 75px;
     }
 }
 @media (max-width: map-get($landingBrakePoints, mobile)) {
-    .landing-page-showcase-top {
-        height: 50px;
-        a,
+    .footer {
+        transform: translateY(0);
+    }
+    .footer p{
+        color: #999;
+    }
+}
+@media (max-height: 800px){
+    .landing-page-showcase-content {
+        margin-top: 5rem;
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1;
+        }
         p {
-            font-size: 0.92rem;
+            font-size: 1.5rem;
         }
+    }
+    .btn-xl{
+        font-size: 1.2rem;
+    }
+}
+@media (max-height: 500px){
+    .landing-page-showcase-content {
+        margin-top: .5rem;
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+@media(max-width: map-get($landingBrakePoints, mobile-small)) {
+    .landing-page-mobile-top {
+        height: 50px;
+        padding: 10px 5px 0;
         #logo {
-            width: 105px;
-            min-width: 105px;
+            width: 100px;
+        }
+        .signin-mobile {
+            padding-top: 8px;
+            font-size: 0.9rem;
         }
     }
-}
-@media (max-height: map-get($landingBrakePoints, mobileHeightTall)) and (max-width: map-get($landingBrakePoints, mobileMaxWidth)) {
-    .landing-page-showcase-content {
-        margin-top: 22rem;
-    }
-    .container{
-        max-width: 100%;
-    }
-    .tab-3-table{
-        font-size: .9rem;
-        tbody tr td {
-            color: #999;
-            padding: 0.2rem .4rem;
-            text-align: center;
-        }
-    }
-}
-@media (max-height: map-get($landingBrakePoints, mobileHeight)) and (max-width: map-get($landingBrakePoints, mobileMaxWidth)) {
-    .landing-page-showcase-content {
-        margin-top: 8rem;
-    }
-    .tab-3-table{
-        font-size: .8rem;
-        tbody tr td {
-            color: #999;
-            padding: 0.2rem .4rem;
-            text-align: center;
-        }
+    .btn-xl{
+        font-size: 1.1rem;
     }
 }
