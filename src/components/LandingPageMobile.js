@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./Footers/Footer";
 
 import Logo_Full from "../resources/images/netflix_logo_full.png";
 import Mobile_Landing_Devices from "../resources/images/mobile-landing-devices.png";
@@ -19,7 +19,7 @@ export default class LandingPageMobile extends Component {
                         <p>
                             Have an account?
                         </p>
-                        <Link to="/sigin-existing" className="signin-mobile">
+                        <Link to="/signin-existing" className="signin-mobile">
                             Sign In
                         </Link>
                     </div>

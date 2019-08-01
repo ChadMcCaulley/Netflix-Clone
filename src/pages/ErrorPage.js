@@ -1,11 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import NavbarSimple from "../components/NavbarSimple";
+import Navbar from "../components/Navbars/Navbar";
 
 const ErrorPage = () => {
     return (
         <div>
-            <NavbarSimple/>
+            <Navbar logoLink="/" pText="" btnText="" btnLink="/"/>
             <div className="error-message-container">
                 <p className="text-xl text-heavy">Netflix Site Error - Page Not Found</p>
                 <p>

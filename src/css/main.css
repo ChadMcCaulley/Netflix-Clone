@@ -76,6 +76,11 @@
   margin-bottom: 1rem;
 }
 
+.text-sm {
+  font-size: .9rem;
+  margin-bottom: .8rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -84,48 +89,16 @@
   color: #999;
 }
 
+.text-extra-heavy {
+  font-weight: 900px;
+}
+
 .text-heavy {
   font-weight: 700px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Arial", "sans-serif";
-  background: #000;
-  color: #fff;
-}
-
-ul {
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #fff;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-p {
-  color: #fff;
-  margin: 0.5rem 0;
-}
-
-img {
-  width: 100%;
+.text-bold {
+  font-weight: bold;
 }
 
 .landing-page-showcase {
@@ -146,43 +119,6 @@ img {
   background: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
           box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
-}
-
-.landing-page-showcase-top {
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  height: 200px;
-  width: 100%;
-}
-
-.landing-page-showcase-top #logo {
-  position: absolute;
-  left: 50%;
-  width: 500px;
-  cursor: pointer;
-}
-
-.landing-page-showcase-top a {
-  font-size: 3rem;
-  padding: 25px 50px;
-  margin-right: 80px;
-  border-radius: 10px;
-}
-
-.landing-page-showcase-top p {
-  padding: 20px 40px;
-  font-size: 3rem;
 }
 
 .landing-page-showcase-content {
@@ -436,6 +372,46 @@ img {
   background: #222;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", "sans-serif";
+  background: #000;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  color: #fff;
+  margin: 0.5rem 0;
+}
+
+img {
+  width: 100%;
+}
+
 .error-message-container {
   height: 100vh;
   width: 100%;
@@ -504,6 +480,26 @@ img {
   padding: 0.4rem 1rem;
 }
 
+.login-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
+}
+
+.login-form-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .navbar-bottom {
   position: fixed;
   width: 100%;
@@ -512,19 +508,62 @@ img {
   padding: 5%;
 }
 
-.navbar-top-simple {
-  position: relative;
-  background: #000;
+.nav-simple {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 200px;
   width: 100%;
 }
 
-.navbar-top-simple #logo {
-  width: 170px;
+.nav-simple #logo {
+  position: absolute;
+  left: 50%;
+  width: 500px;
   cursor: pointer;
+}
+
+.nav-simple a {
+  font-size: 3rem;
+  padding: 25px 50px;
+  margin-right: 80px;
+  border-radius: 10px;
+}
+
+.nav-simple p {
+  padding: 20px 40px;
+  font-size: 3rem;
+}
+
+.login-form {
+  z-index: 2;
+  position: relative;
+  height: 700px;
+  padding: 50px;
+  margin: 100px 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 2560px) {
@@ -538,20 +577,20 @@ img {
   .landing-page-showcase-content p {
     font-size: 3rem;
   }
-  .landing-page-showcase-top {
+  .nav-simple {
     height: 150px;
   }
-  .landing-page-showcase-top #logo {
+  .nav-simple #logo {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: 400px;
   }
-  .landing-page-showcase-top a {
+  .nav-simple a {
     border-radius: 5px;
     margin-right: 40px;
   }
-  .landing-page-showcase-top a,
-  .landing-page-showcase-top p {
+  .nav-simple a,
+  .nav-simple p {
     padding: 15px 30px;
     font-size: 2.2rem;
   }
@@ -572,20 +611,20 @@ img {
     font-size: 2rem;
     line-height: 1.25;
   }
-  .landing-page-showcase-top {
+  .nav-simple {
     height: 90px;
   }
-  .landing-page-showcase-top #logo {
+  .nav-simple #logo {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     width: 167px;
   }
-  .landing-page-showcase-top a {
+  .nav-simple a {
     border-radius: 2px;
     margin-right: 20px;
   }
-  .landing-page-showcase-top a,
-  .landing-page-showcase-top p {
+  .nav-simple a,
+  .nav-simple p {
     padding: 7px;
     font-size: 1rem;
   }
@@ -633,7 +672,7 @@ img {
 }
 
 @media (max-width: 1000px) {
-  .landing-page-showcase-top #logo {
+  .nav-simple #logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -642,13 +681,13 @@ img {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  .landing-page-showcase-top p {
+  .nav-simple p {
     margin-left: auto;
   }
 }
 
 @media (max-width: 700px) {
-  .landing-page-showcase-top {
+  .nav-simple {
     height: 75px;
   }
 }
@@ -656,6 +695,9 @@ img {
 @media (max-width: 540px) {
   .footer p {
     color: #999;
+  }
+  .footer {
+    margin-bottom: 80px;
   }
 }
 
@@ -689,6 +731,13 @@ img {
 }
 
 @media (max-width: 340px) {
+  .nav-simple {
+    height: 50px;
+    padding: 10px 5px 0;
+  }
+  .nav-simple #logo {
+    width: 100px;
+  }
   .landing-page-mobile-top {
     height: 50px;
     padding: 10px 5px 0;

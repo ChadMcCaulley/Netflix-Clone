@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./Footers/Footer";
+import Navbar from "./Navbars/Navbar"
 
 // Images
 import Logo_Full from "../resources/images/netflix_logo_full.png";
@@ -49,14 +50,7 @@ class LandingPageStandard extends Component {
         return (
             <div>
                 <header className="landing-page-showcase">
-                    <div className="landing-page-showcase-top">
-                        <Link to="/"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
-                        <p>
-                            Have an account?
-                        </p>
-                        <Link to={existingUser} className="btn btn-rounded">
-                            Sign In</Link>
-                    </div>
+                    <Navbar logoLink="/" pText="Have an account?" btnText="Sign In" btnLink={existingUser}/>
                     <div className="landing-page-showcase-content">
                         <h1>
                             See what's next</h1>

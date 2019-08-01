@@ -1,10 +1,11 @@
 // Imports
 @import "./constants/colors";
+@import "./constants/images";
 @import "./utilities/buttons";
 @import "./utilities/text";
+@import "./pages/landingPage";
 
 $font-stack: "Arial", "sans-serif";
-$images: (showcaseBackground: url("../resources/images/netflix_showcase_background.jpg"));
 $landingBrakePoints: ( QHD: 2560px, HD: 1920px, logoLeft: 1000px, contentDown: 927px, showcase-top-smaller: 700px, mobile: 540px, mobile-small: 340px );
 
 * {
@@ -40,236 +41,8 @@ img {
     width: 100%;
 }
 
-.landing-page-showcase {
-    position: relative;
-    width: 100%;
-    height: 93vh;
-    background: map-get($images, showcaseBackground) no-repeat center center/cover;
-}
-.landing-page-showcase::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0,0,0,0.5);
-    box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
-}
-.landing-page-showcase-top {
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    align-items: center;
-    position: relative;
-    height: 200px;
-    width: 100%;
-    #logo {
-        position: absolute;
-        left: 50%;
-        width: 500px;
-        cursor: pointer;
-    }
-    a {
-        font-size: 3rem;
-        padding: 25px 50px;
-        margin-right: 80px;
-        border-radius: 10px;
-    }
-    p {
-        padding: 20px 40px;
-        font-size: 3rem;
-    }
-}
-.landing-page-showcase-content {
-    z-index: 2;
-    position: relative;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 30rem;
-    h1 {
-        font-weight: 600;
-        font-size: 11rem;
-        line-height: 1.1;
-        margin: 0 0 2rem;
-    }
-    p {
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 4rem;
-        line-height: 1.25;
-        margin: 0 0 2rem;
-    }
-    #signup-link-icon {
-        transform: translate(50%, 15%);
-    }
-}
-
-// Mobile Landing Top 
-.landing-page-mobile-top {
-    height: 70px;
-    padding: 20px 10px 0;
-    display: flex;
-    width: 100%;
-    #logo {
-        width: 110px;
-        align-self: center;
-    }
-    p {
-        margin-left: auto;
-        padding: 0 7px;
-        font-size: 0.8rem;
-    }
-    .signin-mobile {
-        padding-top: 5px;
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-    .signin-mobile:active {
-        text-decoration: underline;
-    }
-}
-
-// Mobile Landing Cards
-.mobile-selling-points-card {
-    display: flex;
-    padding: 1.5rem 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    background: map-get($colors, mobileCards);
-    border-radius: 2%;
-}
-
-.background-image-container {
-    position: relative;
-    height: 70vh;
-    padding: 1.5rem 1rem;
-    margin: 1rem;
-    border-radius: 2%;
-    background: map-get($images, showcaseBackground) no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    h3 {
-        padding: 1rem 2rem 0;
-        z-index: 2;
-    }
-    p {
-        padding: 0 2rem;
-        z-index: 2;
-    }
-}
-.background-image-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 20%, transparent);
-}
-
-// Landing Page Tabs
-.landing-page-tabs {
-    position: relative;
-    z-index: 3;
-    padding-top: 1rem;
-    border-bottom: 3px solid #3d3d3d;
-    background: map-get($colors, tabsBackground);
-}
-.landing-page-tabs .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    div {
-        padding: 1.5rem 0;
-    }
-    div:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-    .tab p {
-        font-size: 1.2rem;
-        padding-top: 0.5rem;
-    }
-    .tab-border {
-        border-bottom: map-get($colors, brightRed) 4px solid;
-    }
-}
-
-// tab content
-.tab-content {
-    position: relative;
-    padding: 3rem 0;
-}
-
-// Tab 1 content
-#tab-1-content .tab-1-content-inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    align-items: flex-start;
-    justify-content: center;
-    div {
-        margin-top: 2rem;
-    }
-}
-
-// Tab 2 content
-#tab-2-content .tab-2-content-top {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 1rem;
-    align-items: center;
-    justify-content: center;
-}
-#tab-2-content .tab-2-content-bottom {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-// Tab 3 Content
-.tab-3-table {
-    width: 100%;
-    margin-top: 2rem;
-    border-collapse: collapse;
-    border-spacing: 0;
-    thead th {
-        text-transform: uppercase;
-        padding: 0.8rem;
-    }
-    tbody tr td {
-        color: #999;
-        padding: 0.8rem 1.2rem;
-        text-align: center;
-    }
-    tbody tr td:first-child {
-        text-align: left;
-    }
-    tbody tr:nth-child(odd) {
-        background: #222;
-    }
-}
-
 // Error page
-.error-message-container{
+.error-message-container {
     height: 100vh;
     width: 100%;
     background: map-get($colors, mobileCards);
@@ -319,6 +92,24 @@ img {
 .mobile-card-container {
     padding: 0.4rem 1rem;
 }
+.login-form-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: map-get($images, showcaseBackground) no-repeat center center/cover;
+}
+.login-form-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
 
 // Navbars
 .navbar-bottom {
@@ -328,16 +119,46 @@ img {
     bottom: 0;
     padding: 5%;
 }
-.navbar-top-simple {
-    position: relative;
-    background: #000;
+.nav-simple{
+    z-index: 2;
     display: flex;
-    padding: 15px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    height: 200px;
     width: 100%;
     #logo {
-        width: 170px;
+        position: absolute;
+        left: 50%;
+        width: 500px;
         cursor: pointer;
     }
+    a {
+        font-size: 3rem;
+        padding: 25px 50px;
+        margin-right: 80px;
+        border-radius: 10px;
+    }
+    p {
+        padding: 20px 40px;
+        font-size: 3rem;
+    }
+}
+
+// forms
+.login-form{
+    z-index: 2;
+    position: relative;
+    height: 700px;
+    padding: 50px;
+    margin: 100px 225px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.5));
 }
 
 // Media Queries
@@ -352,7 +173,7 @@ img {
             font-size: 3rem;
         }
     }
-    .landing-page-showcase-top {
+    .nav-simple{
         height: 150px;
         #logo {
             transform: translate(-50%, -50%);
@@ -384,7 +205,7 @@ img {
             line-height: 1.25;
         }
     }
-    .landing-page-showcase-top {
+    .nav-simple{
         height: 90px;
         #logo {
             transform: translate(-50%, -50%);
@@ -440,7 +261,7 @@ img {
     }
 }
 @media (max-width: map-get($landingBrakePoints, logoLeft)) {
-    .landing-page-showcase-top {
+    .nav-simple{
         #logo {
             flex: 0 1 auto;
             position: relative;
@@ -453,13 +274,16 @@ img {
     }
 }
 @media (max-width: map-get($landingBrakePoints, showcase-top-smaller)) {
-    .landing-page-showcase-top {
+    .nav-simple{
         height: 75px;
     }
 }
 @media (max-width: map-get($landingBrakePoints, mobile)) {
     .footer p {
         color: #999;
+    }
+    .footer {
+        margin-bottom: 80px;
     }
 }
 @media (max-height: 800px) {
@@ -490,6 +314,13 @@ img {
     }
 }
 @media(max-width: map-get($landingBrakePoints, mobile-small)) {
+    .nav-simple{
+        height: 50px;
+        padding: 10px 5px 0;
+        #logo{
+            width: 100px;
+        }
+    }
     .landing-page-mobile-top {
         height: 50px;
         padding: 10px 5px 0;
