@@ -4,7 +4,6 @@
 @import "./utilities/buttons";
 @import "./utilities/text";
 @import "./pages/landingPage";
-@import "./utilities/mediaQueries";
 
 $font-stack: "Arial", "sans-serif";
 
@@ -96,10 +95,13 @@ img {
     position: absolute;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
 }
 .login-form-container::after {
@@ -112,90 +114,6 @@ img {
     z-index: 1;
     background: rgba(0,0,0,0.5);
 }
-
-// Navbars
-.navbar-bottom {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    bottom: 0;
-    padding: 5%;
-}
-.nav-simple {
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    align-items: center;
-    position: relative;
-    height: 200px;
-    width: 100%;
-    #logo {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        width: 500px;
-        cursor: pointer;
-    }
-    a {
-        font-size: 3rem;
-        padding: 25px 50px;
-        margin-right: 80px;
-        border-radius: 10px;
-    }
-    p {
-        padding: 20px 40px;
-        font-size: 3rem;
-    }
-}
-
-// forms
-.login-form {
-    z-index: 2;
-    position: absolute;
-    max-height: 100vh;
-    width: 450px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 40px 60px 0;
-    border-radius: 5px;
-    background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.7));
-    margin-top: 400px;
-    p {
-        margin-bottom: 2rem;
-    }
-    .btn-lg {
-        margin-top: 2rem;
-        width: 100%;
-    }
-}
-
-// Input Fields
-.input-field-container {
-    position: relative;
-    margin-bottom: 1rem;
-    height: 3rem;
-    width: 100%;
-    border-radius: 5px;
-    background: #fff;
-    label {
-        position: absolute;
-        padding: 5px 20px;
-        color: black;
-    }
-    input {
-        position: absolute;
-        font-size: 1rem;
-        width: 100%;
-        height: 100%;
-        padding: 15px 20px 0;
-        border: none;
-        background: none;
-    }
-}
-
 .remember-help-container {
     position: relative;
     display: flex;
@@ -229,6 +147,95 @@ img {
         transform: translateY(-4px);
     }
 }
+// Navbars
+.navbar-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    padding: 5%;
+}
+.nav-simple {
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    #logo {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 500px;
+        cursor: pointer;
+    }
+    .logo-alone {
+        position: absolute;
+        left: 0;
+        width: 500px;
+        cursor: pointer;
+    }
+    a {
+        font-size: 3rem;
+        padding: 25px 50px;
+        margin-right: 80px;
+        border-radius: 10px;
+    }
+    p {
+        padding: 20px 40px;
+        font-size: 3rem;
+    }
+}
+
+// forms
+.login-form {
+    z-index: 2;
+    position: absolute;
+    max-height: 100vh;
+    width: 450px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 40px 60px 0;
+    border-radius: 5px;
+    background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.7));
+    margin-bottom: 201px;
+    p {
+        margin-bottom: 2rem;
+    }
+    .btn-lg {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+// Input Fields
+.input-field-container {
+    position: relative;
+    margin-bottom: 1rem;
+    height: 3rem;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    label {
+        position: absolute;
+        padding: 5px 20px;
+        color: black;
+    }
+    input {
+        position: absolute;
+        font-size: 1rem;
+        width: 100%;
+        height: 100%;
+        padding: 15px 20px 0;
+        border: none;
+        background: none;
+    }
+}
+
 .login-form-bottom-new {
     display: flex;
     p {
@@ -237,17 +244,7 @@ img {
     }
 }
 
-$landingBrakePoints: ( 
-    UHD: 3840,
-    QHD: 2560px, 
-    HD: 1920px, 
-    logoLeft: 1000px, 
-    contentDown: 927px, 
-    showcase-top-smaller: 700px, 
-    login-form: 600px, 
-    mobile: 540px, 
-    mobile-small: 340px 
-);
+$landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, contentDown: 927px, showcase-top-smaller: 700px, login-form: 600px, mobile: 540px, mobile-small: 340px );
 
 // Media Queries
 @media (max-width: map-get($landingBrakePoints, QHD)) {
@@ -261,7 +258,7 @@ $landingBrakePoints: (
             font-size: 3rem;
         }
     }
-    .login-form{
+    .login-form {
         margin-top: 201px;
     }
     .landing-page-showcase .nav-simple {
@@ -298,7 +295,7 @@ $landingBrakePoints: (
     }
 }
 @media (max-width: map-get($landingBrakePoints, HD)) {
-    .login-form{
+    .login-form {
         margin-top: 91px;
     }
     .landing-page-showcase-content {
@@ -400,7 +397,23 @@ $landingBrakePoints: (
         height: 75px;
     }
 }
-@media (max-width: map-get($landingBrakePoints, mobile)) {
+@media (max-width: map-get($landingBrakePoints, login-form)) {
+    .login-form-container{
+        display: relative;
+        padding: 0;
+        background: none;
+        padding: 0 10px;
+    }
+    .login-form{
+        display: absolute;
+        width: 100%;
+        padding: 0;
+    }
+    .nav-simple .logo-alone{
+        padding: 0 15px;
+    }
+}
+ @media (max-width: map-get($landingBrakePoints, mobile)){
     .footer p {
         color: #999;
     }
