@@ -6,6 +6,9 @@ import Navbar from "../components/Navbars/Navbar";
 
 class LoginPage extends Component {
     render() {
+        const signinLink = "/";
+        const helpLink = "/";
+        const signupLink = "/signup-tour";
         return (
             <div>
                 <Navbar logoLink="/" pText="" btnText="" btnLink="/"/>
@@ -20,14 +23,14 @@ class LoginPage extends Component {
                             <label for="user_login_password" className="text-xsm">Password</label>
                             <input type="password" id="user_login_password"></input>
                         </div>
-                        <Link to="/" className="btn btn-lg btn-rounded signin-btn">
+                        <Link to={signinLink} className="btn btn-lg btn-rounded signin-btn">
                             Sign In
                         </Link>
                         <div className="remember-help-container">
                             <input type="checkbox"></input>
                             <p className="text-sm text-dark text-bold">
                                 Remember me</p>
-                            <Link to="/" className="text-sm text-dark text-bold">
+                            <Link to={helpLink} className="text-sm text-dark text-bold">
                                 Need help?</Link>
                         </div>
                         <div className="login-form-bottom-container">
@@ -39,7 +42,7 @@ class LoginPage extends Component {
                             <div className="login-form-bottom-new">
                                 <p className=" text-dark">
                                     New to Netflix?</p>
-                                <Link to="/sign-up" className="signin-mobile">
+                                <Link to={signupLink} className="signin-mobile">
                                     Sign up now.
                                 </Link>
                             </div>

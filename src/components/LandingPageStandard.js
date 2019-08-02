@@ -16,7 +16,7 @@ import {FaDoorOpen, FaTabletAlt, FaTags, FaTimes, FaCheck} from "react-icons/fa"
 const inactiveTab = "tab";
 const activeTab = "tab tab-border";
 const urls = {
-    newUser: "/sigin-new-tour",
+    newUser: "/sigup-tour",
     existingUser: "signin-existing"
 };
 

@@ -9,6 +9,8 @@ import Mobile_Landing_Cancel from "../resources/images/mobile-landing-cancel.png
 
 export default class LandingPageMobile extends Component {
     render() {
+        const signinLink = "/signin-existing";
+        const signupLink = "/signup-tour";
         return (
             <div>
                 <header className="landing-page-mobile">
@@ -19,12 +21,12 @@ export default class LandingPageMobile extends Component {
                         <p>
                             Have an account?
                         </p>
-                        <Link to="/signin-existing" className="signin-mobile">
+                        <Link to={signinLink} className="signin-mobile">
                             Sign In
                         </Link>
                     </div>
                     <div className="navbar-bottom">
-                        <Link to="/signin-new-tour" className="btn btn-lg btn-bottom">
+                        <Link to={signupLink} className="btn btn-lg btn-bottom">
                             Try 30 Days Free
                         </Link>
                     </div>
