@@ -4,7 +4,6 @@ import Footer from "./Footers/Footer";
 import Navbar from "./Navbars/Navbar"
 
 // Images
-import Logo_Full from "../resources/images/netflix_logo_full.png";
 import Tab_1_Image from "../resources/images/tab-1-cancel-anytime.png";
 import Tab_2_TV from "../resources/images/tab-2-watch-tv.png";
 import Tab_2_Mobile from "../resources/images/tab-2-watch-mobile.png";

@@ -11,21 +11,18 @@ class LoginPage extends Component {
                 <Navbar logoLink="/" pText="" btnText="" btnLink="/"/>
                 <div className="login-form-container">
                     <form className="login-form">
-                        <p className="text-xl text-extra-heavy">Sign In</p>
+                        <p className="text-xxl text-bold">Sign In</p>
                         <div className="input-field-container">
-                            <label>
-                                <input type="text" id="user_login_email" placeholder="Email or phone number"></input>
-                                <label for="user_login_email" className="input-label">Email or phone number</label>
-                            </label>
+                            <label for="user_login_email" className="text-xsm">Email or phone number</label>
+                            <input type="text" id="user_login_email"></input>
                         </div>
                         <div className="input-field-container">
-                            <label>
-                                <input type="password" id="user_login_password" placeholder="Password"></input>
-                                <label for="user_login_password" className="input-label">Password</label>
-                            </label>
+                            <label for="user_login_password" className="text-xsm">Password</label>
+                            <input type="password" id="user_login_password"></input>
                         </div>
-                        <Link to="/" className="btn btn-lg">
-                            Sign In</Link>
+                        <Link to="/" className="btn btn-lg btn-rounded signin-btn">
+                            Sign In
+                        </Link>
                         <div className="remember-help-container">
                             <input type="checkbox"></input>
                             <p className="text-sm text-dark text-bold">
@@ -36,11 +33,15 @@ class LoginPage extends Component {
                         <div className="login-form-bottom-container">
                             <div className="login-form-bottom-icon-container">
                                 <FaFacebookSquare size={24} className="facebook-icon"/>
-                            <p className="text-sm text-dark"> Login with Facebook</p>
+                                <p className="text-sm text-dark">
+                                    Login with Facebook</p>
                             </div>
                             <div className="login-form-bottom-new">
-                                <p className="text-lg text-dark"> New to Netflix?</p>
-                                <Link to="/sign-up" className="text-lg"> Sign up now. </Link>
+                                <p className=" text-dark">
+                                    New to Netflix?</p>
+                                <Link to="/sign-up" className="signin-mobile">
+                                    Sign up now.
+                                </Link>
                             </div>
                         </div>
                     </form>
