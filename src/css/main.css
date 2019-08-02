@@ -144,7 +144,7 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-top: 30rem;
+  padding-top: 30rem;
 }
 
 .landing-page-showcase-content h1 {
@@ -566,6 +566,86 @@ img {
           transform: translateY(-4px);
 }
 
+.signup-tour-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
+  background: #fff;
+}
+
+.signup-tour-container .signin-mobile {
+  color: black;
+  font-size: 1.75rem;
+}
+
+.signup-tour-inner {
+  padding-top: 15rem;
+  text-align: center;
+}
+
+.signup-tour-inner .signup-tour-inner-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.signup-tour-inner #check-icon-circle {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #E50914;
+  padding: 2px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.signup-tour-inner .step-number {
+  color: black;
+  margin-bottom: 0;
+}
+
+.signup-tour-inner .text-xl {
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.signup-tour-inner .tour-list {
+  color: black;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.signup-tour-inner .tour-list li {
+  margin-bottom: 1rem;
+}
+
+.signup-tour-inner .tour-list #check-icon {
+  color: #E50914;
+  margin-right: 10px;
+}
+
+.signup-tour-inner .btn-lg {
+  width: 100%;
+}
+
 .navbar-bottom {
   position: fixed;
   width: 100%;
@@ -587,7 +667,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
   height: 200px;
   width: 100%;
 }
@@ -689,7 +769,7 @@ img {
 
 @media (max-width: 2560px) {
   .landing-page-showcase-content {
-    margin-top: 18rem;
+    padding-top: 24rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 8em;
@@ -740,7 +820,7 @@ img {
     margin-top: 91px;
   }
   .landing-page-showcase-content {
-    margin-top: 8rem;
+    padding-top: 15rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 5.2rem;
@@ -796,7 +876,7 @@ img {
     display: none;
   }
   .landing-page-showcase-content {
-    margin-top: 25rem;
+    padding-top: 35rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 3.2rem;

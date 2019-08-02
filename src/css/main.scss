@@ -147,6 +147,60 @@ img {
         transform: translateY(-4px);
     }
 }
+.signup-tour-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    background: #fff; 
+    .signin-mobile{
+        color: black;
+        font-size: 1.75rem;
+    }
+}
+.signup-tour-inner{
+    padding-top: 15rem;
+    text-align: center;
+    .signup-tour-inner-top{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    #check-icon-circle{
+        position: relative;
+        align-self: center;
+        background: map-get($colors, brightRed);
+        padding: 2px;
+        border-radius: 100px;
+        margin-bottom: 1rem;
+    }
+    .step-number{
+        color: black;
+        margin-bottom: 0;
+    }
+    .text-xl{
+        color: black;
+        margin-bottom: 2rem;
+    }
+    .tour-list{
+        color: black;
+        text-align: left;
+        margin-bottom: 2rem;
+        li{
+            margin-bottom: 1rem;
+        }
+        #check-icon{
+            color: map-get($colors, brightRed);
+            margin-right: 10px;
+        }
+    }
+    .btn-lg{
+        width: 100%;
+    }
+}
 // Navbars
 .navbar-bottom {
     position: fixed;
@@ -161,7 +215,7 @@ img {
     justify-content: flex-end;
     flex-wrap: nowrap;
     align-items: center;
-    position: relative;
+    position: absolute;
     height: 200px;
     width: 100%;
     #logo {
@@ -249,7 +303,7 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
 // Media Queries
 @media (max-width: map-get($landingBrakePoints, QHD)) {
     .landing-page-showcase-content {
-        margin-top: 18rem;
+        padding-top: 24rem;
         h1 {
             font-size: 8em;
             line-height: 1;
@@ -299,7 +353,7 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
         margin-top: 91px;
     }
     .landing-page-showcase-content {
-        margin-top: 8rem;
+        padding-top: 15rem;
         h1 {
             font-size: 5.2rem;
             line-height: 1.1;
@@ -354,7 +408,7 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
         display: none;
     }
     .landing-page-showcase-content {
-        margin-top: 25rem;
+        padding-top: 35rem;
         h1 {
             font-size: 3.2rem;
             line-height: 1;

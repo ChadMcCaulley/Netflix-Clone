@@ -5,8 +5,11 @@ import Logo_Full from "../../resources/images/netflix_logo_full.png";
 
 export default function Navbar({logoLink, pText, btnText, btnLink}) {
     let btnClass = "", logoClass = "";
-    if(btnText !== undefined && btnText !== "") btnClass = "btn btn-rounded";
-    if((pText === "" || pText === undefined) && (btnText === "" || btnText === undefined)){
+    if(btnText !== undefined && btnText !== "")
+        btnClass = "btn btn-rounded";
+    if((pText === "" || pText === undefined)){
+        if(btnText !== "" && btnText !== undefined)
+            btnClass = "signin-mobile";
         logoClass = "logo-alone";
     }
     return (
