@@ -655,7 +655,7 @@ img {
 }
 
 .nav-simple {
-  z-index: 2;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -10,7 +10,7 @@ import Mobile_Landing_Cancel from "../resources/images/mobile-landing-cancel.png
 export default class LandingPageMobile extends Component {
     render() {
         const signinLink = "/signin-existing";
-        const signupLink = "/signup-tour";
+        const signupLink = "/signup-tour/benefits";
         return (
             <div>
                 <header className="landing-page-mobile">
