@@ -1054,9 +1054,9 @@ img {
   }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 600px) {
   .landing-page-showcase-content {
-    margin-top: 5rem;
+    padding-top: 8rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 3.2rem;
@@ -1070,9 +1070,9 @@ img {
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 400px) {
   .landing-page-showcase-content {
-    margin-top: 0.5rem;
+    padding-top: 5rem;
   }
   .landing-page-showcase-content h1 {
     font-size: 3.2rem;

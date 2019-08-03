@@ -406,9 +406,9 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
         margin-bottom: 80px;
     }
 }
-@media (max-height: 800px) {
+@media (max-height: 600px) {
     .landing-page-showcase-content {
-        margin-top: 5rem;
+        padding-top: 8rem;
         h1 {
             font-size: 3.2rem;
             line-height: 1;
@@ -421,9 +421,9 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
         font-size: 1.2rem;
     }
 }
-@media (max-height: 500px) {
+@media (max-height: 400px) {
     .landing-page-showcase-content {
-        margin-top: 0.5rem;
+        padding-top: 5rem;
         h1 {
             font-size: 3.2rem;
             line-height: 1;
