@@ -1,165 +1,13 @@
 // Imports
 @import "./constants/colors";
 @import "./constants/images";
+@import "./constants/layout-general";
 @import "./utilities/buttons";
 @import "./utilities/text";
+@import "./utilities/footer";
+@import "./utilities/containers";
 @import "./pages/landingPage";
 
-$font-stack: "Arial", "sans-serif";
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: $font-stack;
-    background: #000;
-    color: #fff;
-}
-ul {
-    list-style: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #fff;
-}
-a {
-    color: #fff;
-    text-decoration: none;
-}
-p {
-    color: #fff;
-    margin: 0.5rem 0;
-}
-img {
-    width: 100%;
-}
-
-// Error page
-.error-message-container {
-    height: 100vh;
-    width: 100%;
-    background: map-get($colors, mobileCards);
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-    padding: 5%;
-}
-
-// Footer
-.footer {
-    position: relative;
-    max-width: 75%;
-    margin: 1rem auto;
-    overflow: auto;
-    a {
-        color: #999;
-        font-size: 0.9rem;
-    }
-    p {
-        margin-bottom: 1.5rem;
-    }
-    li {
-        line-height: 1.9rem;
-    }
-}
-.footer .footer-cols {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-}
-
-// Container
-.container {
-    max-width: 70%;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 2rem;
-}
-.container-centered {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.mobile-card-container {
-    padding: 0.4rem 1rem;
-}
-.login-form-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: map-get($images, showcaseBackground) no-repeat center center/cover;
-}
-.login-form-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0,0,0,0.5);
-}
-.remember-help-container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
-    justify-content: flex-start;
-    a {
-        margin-left: auto;
-    }
-    p {
-        margin-left: 10px;
-        margin-top: 0;
-    }
-    input {
-        transform: scale(1.25) translateX(3px);
-        margin-top: 2px;
-    }
-}
-.login-form-bottom-container {
-    margin-top: 12rem;
-    margin-bottom: 0;
-    padding: 0;
-}
-.login-form-bottom-icon-container {
-    display: flex;
-    p {
-        margin: 0 5px 1rem;
-    }
-    .facebook-icon {
-        color: #3C5A99;
-        transform: translateY(-4px);
-    }
-}
-.signup-tour-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    position: absolute;
-    background: #fff; 
-    .signin-mobile{
-        color: black;
-        font-size: 1.75rem;
-    }
-}
 .signup-tour-inner{
     padding-top: 15rem;
     text-align: center;
@@ -241,8 +89,21 @@ img {
         padding: 20px 40px;
         font-size: 3rem;
     }
+    .signin-light{
+        color: black;
+        padding: 0;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
+    a.signin-light:hover{
+        text-decoration: underline;
+    }
+    
 }
-
+.nav-light{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
 // forms
 .login-form {
     z-index: 2;
@@ -366,13 +227,13 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
     .nav-simple {
         height: 90px;
         #logo {
-            width: 167px;
+            width: 200px;
         }
     }
     .landing-page-showcase .nav-simple {
         height: 90px;
         #logo {
-            width: 167px;
+            width: 200px;
         }
         a {
             border-radius: 2px;

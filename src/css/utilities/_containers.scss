@@ -1,0 +1,94 @@
+// Error page
+.error-message-container {
+    height: 100vh;
+    width: 100%;
+    background: map-get($colors, mobileCards);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding: 5%;
+}
+
+// Container
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+.container-centered {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.mobile-card-container {
+    padding: 0.4rem 1rem;
+}
+.login-form-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: map-get($images, showcaseBackground) no-repeat center center/cover;
+}
+.login-form-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+.remember-help-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: flex-start;
+    a {
+        margin-left: auto;
+    }
+    p {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+    input {
+        transform: scale(1.25) translateX(3px);
+        margin-top: 2px;
+    }
+}
+.login-form-bottom-container {
+    margin-top: 12rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+.login-form-bottom-icon-container {
+    display: flex;
+    p {
+        margin: 0 5px 1rem;
+    }
+    .facebook-icon {
+        color: #3C5A99;
+        transform: translateY(-4px);
+    }
+}
+.signup-tour-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    background: #fff; 
+    
+}

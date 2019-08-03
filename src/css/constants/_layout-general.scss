@@ -1,0 +1,34 @@
+$font-stack: "Arial", "sans-serif";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: $font-stack;
+    background: #000;
+    color: #fff;
+}
+ul {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+p {
+    color: #fff;
+    margin: 0.5rem 0;
+}
+img {
+    width: 100%;
+}

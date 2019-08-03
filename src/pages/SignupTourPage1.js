@@ -1,13 +1,13 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Navbar from "../components/Navbars/Navbar";
+import NavbarLight from "../components/Navbars/NavbarLight";
 
 import {FaCheckCircle, FaCheck} from "react-icons/fa";
 
 const SignupTourPage1 = () => {
     return (
         <div className="signup-tour-container">
-            <Navbar logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
+            <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
             <form className="signup-tour-inner">
                 <div className="signup-tour-inner-top">
                     <FaCheckCircle id="check-icon-circle" size={42}/>

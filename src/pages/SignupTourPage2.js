@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import Navbar from "../components/Navbars/Navbar";
+import NavbarLight from "../components/Navbars/NavbarLight";
 import {FaTimes, FaCheck} from "react-icons/fa";
 
 export default class SignupTourPage2 extends Component {
@@ -17,9 +17,9 @@ export default class SignupTourPage2 extends Component {
         const endOfFree = this.endOfFree();
         return (
             <div className="signup-tour-container">
-                <Navbar logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
+                <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
                 <form className="signup-tour-inner">
-                    <div className="signup-tour-inner-top">
+                    <div className="signup-page-2-top">
                         <p className="step-number">
                             Step<strong> 1 </strong>of<strong> 3 </strong>
                         </p>

@@ -1,0 +1,22 @@
+// Footer
+.footer {
+    position: relative;
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+    a {
+        color: #999;
+        font-size: 0.9rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+    }
+    li {
+        line-height: 1.9rem;
+    }
+}
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
