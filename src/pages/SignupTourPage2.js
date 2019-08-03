@@ -18,7 +18,7 @@ export default class SignupTourPage2 extends Component {
         return (
             <div className="signup-tour-container">
                 <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
-                <form className="signup-tour-inner">
+                <form className="signup-page-2-inner">
                     <div className="signup-page-2-top">
                         <p className="step-number">
                             Step<strong> 1 </strong>of<strong> 3 </strong>
@@ -27,13 +27,19 @@ export default class SignupTourPage2 extends Component {
                             Choose the plan that's right for you</p>
                         <p>Downgrade or upgrade at any time</p>
                     </div>
-                    <table className="tab-3-table">
+                    <table className="signup-table">
+                        <colgroup>
+                            <col span="1" id="col-1"/>
+                            <col span="1" className="col-2"/>
+                            <col span="1" className="col-3"/>
+                            <col span="1" className="col-4"/>
+                        </colgroup>
                         <thead>
                             <tr className="plan-selection-buttons">
                                 <th></th>
-                                <th>Basic</th>
-                                <th>Standard</th>
-                                <th>Premium</th>
+                                <th className="btn-selection">Basic</th>
+                                <th className="btn-selection">Standard</th>
+                                <th className="btn-selection">Premium</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,7 +87,7 @@ export default class SignupTourPage2 extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/signup-tour/account-creation" className="btn btn-lg">see the plans</Link>
+                    <Link to="/signup-tour/account-creation" className="btn btn-lg">Continue</Link>
                 </form>
             </div>
         )

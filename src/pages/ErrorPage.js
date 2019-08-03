@@ -4,7 +4,7 @@ import Navbar from "../components/Navbars/Navbar";
 
 const ErrorPage = () => {
     return (
-        <div>
+        <div className="error-page">
             <Navbar logoLink="/" pText="" btnText="" btnLink="/"/>
             <div className="error-message-container">
                 <p className="text-xl text-heavy">Netflix Site Error - Page Not Found</p>

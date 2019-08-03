@@ -8,7 +8,6 @@
 body {
   font-family: "Arial", "sans-serif";
   background: #000;
-  color: #fff;
 }
 
 ul {
@@ -188,7 +187,7 @@ img {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
-  padding: 5%;
+  padding-top: 91px;
 }
 
 .container {
@@ -237,6 +236,8 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -486,6 +487,7 @@ img {
 
 .landing-page-tabs .container div {
   padding: 1.5rem 0;
+  color: #999;
 }
 
 .landing-page-tabs .container div:hover {
@@ -493,13 +495,23 @@ img {
   cursor: pointer;
 }
 
+.landing-page-tabs .container div:hover p {
+  color: #fff;
+}
+
 .landing-page-tabs .container .tab p {
   font-size: 1.2rem;
   padding-top: 0.5rem;
+  color: #999;
 }
 
 .landing-page-tabs .container .tab-border {
+  color: #fff;
   border-bottom: #E50914 4px solid;
+}
+
+.landing-page-tabs .container .tab-border p {
+  color: #fff;
 }
 
 .tab-content {
@@ -606,6 +618,7 @@ img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: white;
   background: #E50914;
   padding: 2px;
   border-radius: 100px;
@@ -639,6 +652,69 @@ img {
 
 .signup-tour-inner .btn-lg {
   width: 100%;
+}
+
+.signup-page-2-inner {
+  margin-top: 91px;
+}
+
+.signup-page-2-inner p {
+  color: black;
+}
+
+.signup-page-2-inner .btn {
+  width: 70%;
+}
+
+.signup-table {
+  width: 100%;
+  margin-top: 3rem;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+.signup-table .btn-selection {
+  background: #B20710;
+  color: white;
+  padding: 2rem;
+  margin: 0 10px;
+  min-width: 10rem;
+  max-width: 10rem;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.signup-table .btn-selection:hover {
+  background: #f6121d;
+}
+
+.signup-table thead tr th {
+  text-transform: uppercase;
+  padding: 4rem;
+}
+
+.signup-table tbody tr td {
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+}
+
+.signup-table tbody tr td:nth-child(1) {
+  color: black;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.signup-table tbody tr td:not(:first-child) {
+  color: #999;
+}
+
+.signup-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .navbar-bottom {
@@ -703,8 +779,14 @@ img {
   text-decoration: none;
 }
 
-.nav-simple a.signin-light:hover {
+.nav-simple .signin-light:hover {
   text-decoration: underline;
+}
+
+.error-page .logo-alone {
+  background: black;
+  width: 100%;
+  border-radius: 0;
 }
 
 .nav-light {
