@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import NavbarLight from "../components/Navbars/NavbarLight";
+import NavbarLight from "../../components/Navbars/NavbarLight";
 
 import {FaTabletAlt, FaTv} from "react-icons/fa";
 import {IoIosPhonePortrait, IoIosLaptop} from "react-icons/io";

@@ -6,7 +6,8 @@ import Navbar from "../components/Navbars/Navbar";
 
 class LoginPage extends Component {
     render() {
-        const signinLink = "/";
+        const account = {_id: 123};
+        const signinLink = `/${account._id}/user-page`;
         const helpLink = "/";
         const signupLink = "/signup-tour";
         return (

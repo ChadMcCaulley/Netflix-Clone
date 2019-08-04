@@ -4,6 +4,8 @@ import NavbarLight from "../components/Navbars/NavbarLight";
 
 
 const SignupForm = () => {
+    const account = {_id: 123}; // Temporary. Will be replaced when backend is connected
+    const accountCreationUrl = `/signup-tour/create-account/${account._id}`;
     return (
         <div>
             <div className="white-background"></div>
@@ -24,14 +26,14 @@ const SignupForm = () => {
                         <p className="text-black text-md text-bold"> Create your account.</p>
                     </div>
                     <div className="input-field-container">
-                            <label for="user_login_email" className="text-xsm">Email or phone number</label>
+                            <label for="user_login_email" className="text-xsm">Email</label>
                             <input type="text" id="user_login_email"></input>
                         </div>
                         <div className="input-field-container">
                             <label for="user_login_password" className="text-xsm">Password</label>
                             <input type="password" id="user_login_password"></input>
                         </div>
-                    <Link to="/signup-tour/plans" className="btn btn-lg" style={{width: "100%"}}>continue</Link>
+                    <Link to={accountCreationUrl} className="btn btn-lg" style={{width: "100%"}}>continue</Link>
                 </form>
             </div>
         </div>

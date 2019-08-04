@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import NavbarLight from "../components/Navbars/NavbarLight";
+import NavbarLight from "../../components/Navbars/NavbarLight";
 
 import {FaCheckCircle, FaCheck} from "react-icons/fa";
 

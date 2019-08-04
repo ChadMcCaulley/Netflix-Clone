@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import NavbarLight from "../components/Navbars/NavbarLight";
+import NavbarLight from "../../components/Navbars/NavbarLight";
 import {FaTimes, FaCheck} from "react-icons/fa";
 
 export default class SignupTourPage2 extends Component {
@@ -114,6 +114,10 @@ export default class SignupTourPage2 extends Component {
                                 </tr>
                             </tbody>
                         </table>
+                        <p className="text-dark text-sm" style={{textAlign: "center"}}>
+                            HD and Ultra HD availability subject to your Internet service and device capabilities. Not all content available in HD or Ultra HD. 
+                            <br/> See Terms of Use for more details.
+                        </p>
                         <Link to="/signup-tour/account-creation" className="btn btn-lg">Continue</Link>
                     </form>   
                 </div>
