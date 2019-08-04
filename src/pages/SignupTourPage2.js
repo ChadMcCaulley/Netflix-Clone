@@ -7,7 +7,7 @@ export default class SignupTourPage2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentBtn: 1
+            currentBtn: "btn-3"
         }
     }
     endOfFree() {
@@ -115,7 +115,7 @@ export default class SignupTourPage2 extends Component {
                             </tbody>
                         </table>
                         <Link to="/signup-tour/account-creation" className="btn btn-lg">Continue</Link>
-                    </form>
+                    </form>   
                 </div>
             </div>
         )

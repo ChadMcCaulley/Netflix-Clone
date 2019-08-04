@@ -42,12 +42,17 @@
     }
     .text-xl{
         color: black;
+    }
+    .text-black{
         margin-bottom: 2rem;
+    }
+    .text-no-margin{
+        margin: 0;
     }
     .tour-list{
         color: black;
         text-align: left;
-        margin-bottom: 2rem;
+        margin: 1.5rem 0;
         li{
             margin-bottom: 1rem;
         }
@@ -60,13 +65,32 @@
         width: 100%;
     }
 }
+.icons-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    .icon{
+        margin-right: 15px;
+        color: map-get($colors, brightRed);
+    }
+    .tab-phone-icons-container{
+        align-self: center;
+        .icon{
+            margin: 0;
+        }
+    }
+}
+
 .signup-page-2-inner{
     margin-top: 91px;
     p{
         color: black;
     }
     .btn{
-        width: 70%;
+        position: relative;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
     }
 }
 .signup-table{

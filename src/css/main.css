@@ -133,6 +133,10 @@ img {
   color: #999;
 }
 
+.text-black {
+  color: #000;
+}
+
 .text-extra-heavy {
   font-weight: 900px;
 }
@@ -187,7 +191,7 @@ img {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
-  padding-top: 91px;
+  padding-top: 150px;
 }
 
 .container {
@@ -641,13 +645,20 @@ img {
 
 .signup-tour-inner .text-xl {
   color: black;
+}
+
+.signup-tour-inner .text-black {
   margin-bottom: 2rem;
+}
+
+.signup-tour-inner .text-no-margin {
+  margin: 0;
 }
 
 .signup-tour-inner .tour-list {
   color: black;
   text-align: left;
-  margin-bottom: 2rem;
+  margin: 1.5rem 0;
 }
 
 .signup-tour-inner .tour-list li {
@@ -663,6 +674,34 @@ img {
   width: 100%;
 }
 
+.icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icons-container .icon {
+  margin-right: 15px;
+  color: #E50914;
+}
+
+.icons-container .tab-phone-icons-container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.icons-container .tab-phone-icons-container .icon {
+  margin: 0;
+}
+
 .signup-page-2-inner {
   margin-top: 91px;
 }
@@ -672,7 +711,11 @@ img {
 }
 
 .signup-page-2-inner .btn {
-  width: 70%;
+  position: relative;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 300px;
 }
 
 .signup-table {
