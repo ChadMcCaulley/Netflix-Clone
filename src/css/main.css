@@ -718,6 +718,19 @@ img {
   width: 300px;
 }
 
+.signup-page-2-inner .btn-blue {
+  color: white;
+  background: #0070eb;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem 0 4rem;
+}
+
+.signup-page-2-inner .input-field-container {
+  background: #ddd;
+}
+
 .signup-table {
   width: 100%;
   margin-top: 3rem;

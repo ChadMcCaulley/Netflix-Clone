@@ -8,7 +8,7 @@
 @import "./utilities/containers";
 @import "./pages/landingPage";
 
-.white-background{
+.white-background {
     z-index: 0;
     position: fixed;
     left: 0;
@@ -18,16 +18,16 @@
     background: #fff;
 }
 
-.signup-tour-inner{
+.signup-tour-inner {
     padding-top: 15rem;
     text-align: center;
-    .signup-tour-inner-top{
-        display:flex;
+    .signup-tour-inner-top {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
-    #check-icon-circle{
+    #check-icon-circle {
         position: relative;
         align-self: center;
         color: white;
@@ -36,69 +36,80 @@
         border-radius: 100px;
         margin-bottom: 1rem;
     }
-    .step-number{
+    .step-number {
         color: black;
         margin-bottom: 0;
     }
-    .text-xl{
+    .text-xl {
         color: black;
     }
-    .text-black{
+    .text-black {
         margin-bottom: 2rem;
     }
-    .text-no-margin{
+    .text-no-margin {
         margin: 0;
     }
-    .tour-list{
+    .tour-list {
         color: black;
         text-align: left;
         margin: 1.5rem 0;
-        li{
+        li {
             margin-bottom: 1rem;
         }
-        #check-icon{
+        #check-icon {
             color: map-get($colors, brightRed);
             margin-right: 10px;
         }
     }
-    .btn-lg{
+    .btn-lg {
         width: 100%;
     }
 }
-.icons-container{
-    display:flex;
+.icons-container {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    .icon{
+    .icon {
         margin-right: 15px;
         color: map-get($colors, brightRed);
     }
-    .tab-phone-icons-container{
+    .tab-phone-icons-container {
         align-self: center;
-        .icon{
+        .icon {
             margin: 0;
         }
     }
 }
 
-.signup-page-2-inner{
+.signup-page-2-inner {
     margin-top: 91px;
-    p{
+    p {
         color: black;
     }
-    .btn{
+    .btn {
         position: relative;
         margin-left: 50%;
         transform: translateX(-50%);
         width: 300px;
     }
+    .btn-blue{
+        color: white;
+        background: map-get($colors, brightBlue);
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 2rem 0 4rem;
+    }
+    .input-field-container{
+        background: map-get($colors, inputGrey);
+    }
 }
-.signup-table{
+.signup-table {
     width: 100%;
     margin-top: 3rem;
     border-collapse: separate;
     border-spacing: 15px;
-    .btn-selection{
+    .btn-selection {
         background: map-get($colors, darkRed);
         color: white;
         padding: 2rem;
@@ -111,11 +122,11 @@
         outline: none;
         border: none;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background: lighten(map-get($colors, brightRed), 5%);
         }
     }
-    .btn-active{
+    .btn-active {
         background: lighten(map-get($colors, brightRed), 5%);
     }
     thead tr th {
@@ -126,15 +137,15 @@
         padding: 0.8rem 1.2rem;
         text-align: center;
     }
-    tbody tr td:nth-child(1){
+    tbody tr td:nth-child(1) {
         color: black;
         font-size: 1.1rem;
         text-align: left;
-    } 
-    tbody tr td:not(:first-child){
+    }
+    tbody tr td:not(:first-child) {
         color: #999;
-    } 
-    tbody tr td{
+    }
+    tbody tr td {
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
 }
@@ -179,23 +190,23 @@
         padding: 20px 40px;
         font-size: 3rem;
     }
-    .signin-light{
+    .signin-light {
         color: black;
         padding: 0;
         margin-right: 2rem;
         font-size: 1.4rem;
         text-decoration: none;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
-    } 
+    }
 }
-.error-page .logo-alone{
-    background: black; 
+.error-page .logo-alone {
+    background: black;
     width: 100%;
     border-radius: 0;
 }
-.nav-light{
+.nav-light {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 // forms
@@ -407,22 +418,22 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
     }
 }
 @media (max-width: map-get($landingBrakePoints, login-form)) {
-    .login-form-container{
+    .login-form-container {
         display: relative;
         padding: 0;
         background: none;
         padding: 0 10px;
     }
-    .login-form{
+    .login-form {
         display: absolute;
         width: 100%;
         padding: 0;
     }
-    .nav-simple .logo-alone{
+    .nav-simple .logo-alone {
         padding: 0 15px;
     }
 }
- @media (max-width: map-get($landingBrakePoints, mobile)){
+@media (max-width: map-get($landingBrakePoints, mobile)) {
     .footer p {
         color: #999;
     }
