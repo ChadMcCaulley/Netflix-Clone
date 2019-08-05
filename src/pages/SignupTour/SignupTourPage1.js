@@ -8,7 +8,7 @@ const SignupTourPage1 = () => {
     return (
         <div>
             <div className="white-background"></div>
-            <div className="signup-tour-container">
+            <div className="center-content-container">
                 <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
                 <form className="signup-tour-inner">
                     <div className="signup-tour-inner-top">

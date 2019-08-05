@@ -25,7 +25,7 @@ function App() {
           <Route exact path = "/signup-tour/account-creation" component={SignupTourPage3}/>
           <Route exact path = "/signup-tour/signup-form" component={SignupForm}/>
           <Route exact path = "/signup-tour/create-account/:account_id" component={CreateAccount}/>
-          <Route exact path = "/:account_id/:user_id/netflix-home" component={NetflixMainPage}/>
+          <Route exact path = "/browse" component={NetflixMainPage}/>
           <Route component={ErrorPage}/>
         </Switch>
     </div>

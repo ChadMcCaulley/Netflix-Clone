@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Navbar from "../components/Navbars/Navbar";
+import NavbarFull from "../components/Navbars/NavbarFull";
 
 export default class NetflixMainPage extends Component {
     render() {
         return (
             <div>
-                <Navbar logoLink="/"/>
+                <NavbarFull logoOnly="false"/>
             </div>
         )
     }

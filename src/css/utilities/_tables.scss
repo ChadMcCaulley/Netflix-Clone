@@ -1,0 +1,46 @@
+// Tables
+.signup-table {
+    width: 100%;
+    margin-top: 3rem;
+    border-collapse: separate;
+    border-spacing: 15px;
+    .btn-selection {
+        background: map-get($colors, darkRed);
+        color: white;
+        padding: 2rem;
+        margin: 0 10px;
+        min-width: 10rem;
+        max-width: 10rem;
+        text-align: center;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+        border-radius: 2px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background: lighten(map-get($colors, brightRed), 5%);
+        }
+    }
+    .btn-active {
+        background: lighten(map-get($colors, brightRed), 5%);
+    }
+    thead tr th {
+        text-transform: uppercase;
+        padding: 4rem;
+    }
+    tbody tr td {
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+    }
+    tbody tr td:nth-child(1) {
+        color: black;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    tbody tr td:not(:first-child) {
+        color: #999;
+    }
+    tbody tr td {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+}

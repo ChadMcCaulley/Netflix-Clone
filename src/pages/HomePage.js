@@ -32,7 +32,7 @@ export default class HomePage extends Component {
         this.setState({width: window.innerWidth, height: window.innerHeight});
     }
     render() {
-        const {width, height} = this.state;
+        const {width} = this.state;
         return (
             <div>
                 {(width <= breakPoints.mobile.width) ? <LandingPageMobile/> : <LandingPageStandard/>}

@@ -34,7 +34,7 @@ export default class SignupTourPage2 extends Component {
         return (
             <div>
                 <div className="white-background"></div>
-                <div className="signup-tour-container">
+                <div className="center-content-container">
                     <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
                     <form className="signup-page-2-inner">
                         <div className="signup-page-2-top">

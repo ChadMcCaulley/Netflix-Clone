@@ -2,10 +2,15 @@
 @import "./constants/colors";
 @import "./constants/images";
 @import "./constants/layout-general";
+
 @import "./utilities/buttons";
-@import "./utilities/text";
-@import "./utilities/footer";
 @import "./utilities/containers";
+@import "./utilities/footer";
+@import "./utilities/forms";
+@import "./utilities/navbar";
+@import "./utilities/tables";
+@import "./utilities/text";
+
 @import "./pages/landingPage";
 
 .white-background {
@@ -18,217 +23,92 @@
     background: #fff;
 }
 
-.signup-tour-inner {
-    padding-top: 15rem;
-    text-align: center;
-    .signup-tour-inner-top {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+// Containers
+.user-page-container{
+    margin-top: 15rem;
+    .btn-xl{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    #check-icon-circle {
-        position: relative;
-        align-self: center;
-        color: white;
-        background: map-get($colors, brightRed);
-        padding: 2px;
-        border-radius: 100px;
-        margin-bottom: 1rem;
-    }
-    .step-number {
-        color: black;
-        margin-bottom: 0;
-    }
-    .text-xl {
-        color: black;
-    }
-    .text-black {
-        margin-bottom: 2rem;
-    }
-    .text-no-margin {
-        margin: 0;
-    }
-    .tour-list {
-        color: black;
-        text-align: left;
-        margin: 1.5rem 0;
-        li {
-            margin-bottom: 1rem;
-        }
-        #check-icon {
-            color: map-get($colors, brightRed);
-            margin-right: 10px;
+    .user-icons{
+        width: 15rem;
+        height: 15rem;
+        &:hover{
+            outline: .3rem solid #fff; 
+            p{
+                color: #fff;
+            }  
         }
     }
-    .btn-lg {
-        width: 100%;
+    p {
+        text-align: center;
+        color: #999;
     }
 }
-.icons-container {
+.user-icons-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    .icon {
-        margin-right: 15px;
-        color: map-get($colors, brightRed);
-    }
-    .tab-phone-icons-container {
-        align-self: center;
-        .icon {
-            margin: 0;
-        }
-    }
-}
-
-.signup-page-2-inner {
-    margin-top: 91px;
-    p {
-        color: black;
-    }
-    .btn {
-        position: relative;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        width: 300px;
-    }
-    .btn-blue{
-        color: white;
-        background: map-get($colors, brightBlue);
-        padding: 20px;
-        text-align: center;
-        font-size: 1.2rem;
-        margin: 2rem 0 4rem;
-    }
-    .input-field-container{
-        background: map-get($colors, inputGrey);
-    }
-}
-.signup-table {
-    width: 100%;
-    margin-top: 3rem;
-    border-collapse: separate;
-    border-spacing: 15px;
-    .btn-selection {
-        background: map-get($colors, darkRed);
-        color: white;
-        padding: 2rem;
-        margin: 0 10px;
-        min-width: 10rem;
-        max-width: 10rem;
-        text-align: center;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.45);
-        border-radius: 2px;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            background: lighten(map-get($colors, brightRed), 5%);
-        }
-    }
-    .btn-active {
-        background: lighten(map-get($colors, brightRed), 5%);
-    }
-    thead tr th {
-        text-transform: uppercase;
-        padding: 4rem;
-    }
-    tbody tr td {
-        padding: 0.8rem 1.2rem;
-        text-align: center;
-    }
-    tbody tr td:nth-child(1) {
-        color: black;
-        font-size: 1.1rem;
-        text-align: left;
-    }
-    tbody tr td:not(:first-child) {
-        color: #999;
-    }
-    tbody tr td {
-        border-bottom: 1px solid rgba(0,0,0,0.2);
+    align-content: center;
+    .user-icons{
+        margin: 0 1rem 8rem;
     }
 }
 
 // Navbars
-.navbar-bottom {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    bottom: 0;
-    padding: 5%;
-}
-.nav-simple {
+.nav-full{
     z-index: 10;
     display: flex;
-    justify-content: flex-end;
+    position: fixed;
     flex-wrap: nowrap;
     align-items: center;
-    position: absolute;
-    height: 200px;
+    padding: 0 28px;
+    height: 60px;
     width: 100%;
-    #logo {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        width: 500px;
-        cursor: pointer;
+    .logo{
+        width: 100px;
+        margin-right: 1.5rem;
+        transform: translateY(-50%);
     }
-    .logo-alone {
-        position: absolute;
-        left: 0;
-        width: 500px;
-        cursor: pointer;
-    }
-    a {
-        font-size: 3rem;
-        padding: 25px 50px;
-        margin-right: 80px;
-        border-radius: 10px;
-    }
-    p {
-        padding: 20px 40px;
-        font-size: 3rem;
-    }
-    .signin-light {
-        color: black;
-        padding: 0;
-        margin-right: 2rem;
-        font-size: 1.4rem;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+}
+
+.nav-full-container{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    bottom: 50%;
+    top: 50%;
+    width: 100%;
+    .nav-link{
+        margin-right: 1rem;
+        align-self: center;
+        &:hover{
+            color: #999;
         }
     }
-}
-.error-page .logo-alone {
-    background: black;
-    width: 100%;
-    border-radius: 0;
-}
-.nav-light {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-// forms
-.login-form {
-    z-index: 2;
-    position: absolute;
-    max-height: 100vh;
-    width: 450px;
-    max-width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 40px 60px 0;
-    border-radius: 5px;
-    background: linear-gradient(to bottom,rgba(0,0,0,1), rgba(0,0,0,0.7));
-    margin-bottom: 201px;
-    p {
-        margin-bottom: 2rem;
+    .nav-link:last-child{
+        margin-right: 500px;
     }
-    .btn-lg {
-        margin-top: 2rem;
-        width: 100%;
+    .text-sm{
+        margin-bottom: 0;
+    }
+    .nav-icon{
+        color: white;
+        font-size: 1.75rem;
+        transform: translate(-50%, -50%);
+        margin-right: 0rem;
+    }
+    #search-icon{
+        margin-left: auto;
+        margin-right: 1rem; 
+    }
+    .nav-user-icon{
+        margin-right: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        align-self: center;
     }
 }
 

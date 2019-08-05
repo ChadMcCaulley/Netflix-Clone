@@ -1,0 +1,58 @@
+.navbar-bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    padding: 5%;
+}
+.nav-simple {
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    #logo {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 500px;
+        cursor: pointer;
+    }
+    .logo-alone {
+        position: absolute;
+        left: 0;
+        width: 500px;
+        cursor: pointer;
+    }
+    a {
+        font-size: 3rem;
+        padding: 25px 50px;
+        margin-right: 80px;
+        border-radius: 10px;
+    }
+    p {
+        padding: 20px 40px;
+        font-size: 3rem;
+    }
+    .signin-light {
+        color: black;
+        padding: 0;
+        margin-right: 2rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.error-page .logo-alone {
+    background: black;
+    width: 100%;
+    border-radius: 0;
+}
+.nav-light {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
