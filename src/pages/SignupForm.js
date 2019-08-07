@@ -26,11 +26,11 @@ const SignupForm = () => {
                         <p className="text-black text-md text-bold"> Create your account.</p>
                     </div>
                     <div className="input-field-container">
-                            <label for="user_login_email" className="text-xsm">Email</label>
+                            <label htmlFor="user_login_email" className="text-xsm">Email</label>
                             <input type="text" id="user_login_email"></input>
                         </div>
                         <div className="input-field-container">
-                            <label for="user_login_password" className="text-xsm">Password</label>
+                            <label htmlFor="user_login_password" className="text-xsm">Password</label>
                             <input type="password" id="user_login_password"></input>
                         </div>
                     <Link to={accountCreationUrl} className="btn btn-lg" style={{width: "100%"}}>continue</Link>

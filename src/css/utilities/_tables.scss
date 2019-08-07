@@ -43,4 +43,36 @@
     td:not(:first-child) {
         color: #999;
     }
+    @include respond-to(half-HD){
+        thead tr th{
+            padding: 0;
+        }
+        .btn-selection{
+            position: relative;
+            margin-left: 2rem;
+            margin-right: 1rem;
+            max-width: 8rem;
+            padding: 2rem;
+        }
+        td {
+            padding: 0.4rem 0.6rem;
+        } 
+    }
+    @include respond-to(tablet){
+        thead tr th{
+            padding: 0;
+        }
+        .btn-selection{
+            left: 0rem;
+            max-width: 8rem;
+            padding: 2rem;
+        }
+        td {
+            padding: 0.4rem 0.6rem;
+        }
+        td:first-child{
+            color: #999;
+            text-align: center;
+        }
+    }
 }

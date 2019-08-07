@@ -17,11 +17,11 @@ class LoginPage extends Component {
                     <form className="login-form">
                         <p className="text-xxl text-bold">Sign In</p>
                         <div className="input-field-container">
-                            <label for="user_login_email" className="text-xsm">Email or phone number</label>
+                            <label htmlFor="user_login_email" className="text-xsm">Email or phone number</label>
                             <input type="text" id="user_login_email"></input>
                         </div>
                         <div className="input-field-container">
-                            <label for="user_login_password" className="text-xsm">Password</label>
+                            <label htmlFor="user_login_password" className="text-xsm">Password</label>
                             <input type="password" id="user_login_password"></input>
                         </div>
                         <Link to={signinLink} className="btn btn-lg btn-rounded signin-btn">

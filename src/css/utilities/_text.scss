@@ -6,14 +6,23 @@
 .text-xl {
     font-size: 2rem;
     margin-bottom: 1rem;
+    @include respond-to(half-HD){
+        font-size: 1.5rem;
+    }
 }
 .text-lg {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    @include respond-to(half-HD){
+        font-size: 1.3rem;
+    }
 }
 .text-md {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    @include respond-to(half-HD){
+        font-size: 1rem;
+    }
 }
 .text-sm {
     font-size: .9rem;

@@ -1,10 +1,11 @@
 // forms
 .login-form {
     z-index: 2;
+    margin-top: 300px;
     position: absolute;
+    height: 100rem;
     max-height: 100vh;
-    width: 450px;
-    max-width: 450px;
+    width: 80rem;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -18,5 +19,89 @@
     .btn-lg {
         margin-top: 2rem;
         width: 100%;
+    }
+    @include respond-to(QHD){
+        margin-top: 201px;
+        height: 60rem;
+        width: 40rem;
+    }
+    @include respond-to(HD){
+        margin-top: 91px;
+        height: 45rem;
+        width: 35rem;
+    }
+    @include respond-to(phablet){
+        display: absolute;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.login-form-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: map-get($images, showcaseBackground) no-repeat center center/cover;
+    @include respond-to(phablet){
+        display: relative;
+        padding: 0;
+        background: none;
+        padding: 0 10px;
+    }
+}
+
+.login-form-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+}
+
+.remember-help-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: flex-start;
+    a {
+        margin-left: auto;
+    }
+    p {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+    input {
+        transform: scale(1.25) translateX(3px);
+        margin-top: 2px;
+    }
+}
+
+.login-form-bottom-container {
+    margin-top: 12rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.login-form-bottom-icon-container {
+    display: flex;
+    p {
+        margin: 0 5px 1rem;
+    }
+    .facebook-icon {
+        color: #3C5A99;
+        transform: translateY(-4px);
     }
 }

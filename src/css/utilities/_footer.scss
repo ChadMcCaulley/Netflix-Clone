@@ -14,9 +14,18 @@
     li {
         line-height: 1.9rem;
     }
+    @include respond-to(mobile){
+        margin-bottom: 80px;
+        p {
+            color: #999;
+        }
+    }
 }
 .footer .footer-cols {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
+    @include respond-to(half-HD){
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

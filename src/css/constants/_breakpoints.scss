@@ -1,0 +1,31 @@
+$brakePoints: ( 
+    UHD: 3840px, 
+    QHD: 2560px, 
+    HD: 1920px, 
+    half-HD: 900px, 
+    tablet: 700px, 
+    phablet: 600px, 
+    mobile: 540px, 
+    mobile-small: 400px 
+);
+
+$heightBreakPoints: (
+    phone: 600px,
+    phone-short: 400px
+);
+
+@mixin respond-to($brakepoint){
+    @if map-has-key($brakePoints, $brakepoint){
+        @media (max-width: map-get($brakePoints, $brakepoint)){
+            @content;
+        }
+    }
+}
+
+@mixin respond-to-height($breakpoint){
+    @if map-has-key($heightBreakPoints, $breakpoint){
+        @media(max-height: map-get($heightBreakPoints, $breakpoint)){
+            @content;
+        }
+    }
+}

@@ -67,6 +67,37 @@ img {
   text-transform: uppercase;
 }
 
+@media (max-width: 2560px) {
+  .btn-xl {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .btn-xl {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn-xl {
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-xl {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .btn-xl {
+    font-size: 1.2rem;
+  }
+}
+
 .btn-lg {
   font-size: 1rem;
   padding: 0.8rem 1.3rem;
@@ -133,89 +164,6 @@ img {
 
 .mobile-card-container {
   padding: 0.4rem 1rem;
-}
-
-.login-form-container {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
-}
-
-.login-form-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.remember-help-container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 1rem;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.remember-help-container a {
-  margin-left: auto;
-}
-
-.remember-help-container p {
-  margin-left: 10px;
-  margin-top: 0;
-}
-
-.remember-help-container input {
-  -webkit-transform: scale(1.25) translateX(3px);
-          transform: scale(1.25) translateX(3px);
-  margin-top: 2px;
-}
-
-.login-form-bottom-container {
-  margin-top: 12rem;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-.login-form-bottom-icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.login-form-bottom-icon-container p {
-  margin: 0 5px 1rem;
-}
-
-.login-form-bottom-icon-container .facebook-icon {
-  color: #3C5A99;
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
 }
 
 .center-content-container {
@@ -328,6 +276,12 @@ img {
   margin: 0;
 }
 
+@media (max-width: 700px) {
+  .signup-page-2-top {
+    text-align: center;
+  }
+}
+
 .signup-page-2-inner {
   margin-top: 91px;
 }
@@ -377,6 +331,15 @@ img {
   line-height: 1.9rem;
 }
 
+@media (max-width: 540px) {
+  .footer {
+    margin-bottom: 80px;
+  }
+  .footer p {
+    color: #999;
+  }
+}
+
 .footer .footer-cols {
   display: -ms-grid;
   display: grid;
@@ -385,12 +348,20 @@ img {
   grid-gap: 2rem;
 }
 
+@media (max-width: 900px) {
+  .footer .footer-cols {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .login-form {
   z-index: 2;
+  margin-top: 300px;
   position: absolute;
+  height: 100rem;
   max-height: 100vh;
-  width: 450px;
-  max-width: 450px;
+  width: 80rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,6 +385,122 @@ img {
 .login-form .btn-lg {
   margin-top: 2rem;
   width: 100%;
+}
+
+@media (max-width: 2560px) {
+  .login-form {
+    margin-top: 201px;
+    height: 60rem;
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .login-form {
+    margin-top: 91px;
+    height: 45rem;
+    width: 35rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    display: absolute;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.login-form-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
+}
+
+@media (max-width: 600px) {
+  .login-form-container {
+    display: relative;
+    padding: 0;
+    background: none;
+    padding: 0 10px;
+  }
+}
+
+.login-form-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.remember-help-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.remember-help-container a {
+  margin-left: auto;
+}
+
+.remember-help-container p {
+  margin-left: 10px;
+  margin-top: 0;
+}
+
+.remember-help-container input {
+  -webkit-transform: scale(1.25) translateX(3px);
+          transform: scale(1.25) translateX(3px);
+  margin-top: 2px;
+}
+
+.login-form-bottom-container {
+  margin-top: 12rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.login-form-bottom-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login-form-bottom-icon-container p {
+  margin: 0 5px 1rem;
+}
+
+.login-form-bottom-icon-container .facebook-icon {
+  color: #3C5A99;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .navbar-bottom {
@@ -458,6 +545,12 @@ img {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .nav-simple .logo-alone {
+    padding: 0 15px;
+  }
+}
+
 .nav-simple a {
   font-size: 3rem;
   padding: 25px 50px;
@@ -480,6 +573,53 @@ img {
 
 .nav-simple .signin-light:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 2560px) {
+  .nav-simple #logo {
+    width: 400px;
+    position: relative;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .nav-simple p {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1920px) {
+  .nav-simple {
+    height: 90px;
+  }
+  .nav-simple #logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-simple {
+    height: 75px;
+  }
+  .nav-simple #logo {
+    position: relative;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .nav-simple p {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-simple {
+    height: 50px;
+    padding: 10px 5px 0;
+  }
+  .nav-simple #logo {
+    width: 100px;
+  }
 }
 
 .error-page .logo-alone {
@@ -550,6 +690,40 @@ img {
   color: #999;
 }
 
+@media (max-width: 900px) {
+  .signup-table thead tr th {
+    padding: 0;
+  }
+  .signup-table .btn-selection {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    max-width: 8rem;
+    padding: 2rem;
+  }
+  .signup-table td {
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .signup-table thead tr th {
+    padding: 0;
+  }
+  .signup-table .btn-selection {
+    left: 0rem;
+    max-width: 8rem;
+    padding: 2rem;
+  }
+  .signup-table td {
+    padding: 0.4rem 0.6rem;
+  }
+  .signup-table td:first-child {
+    color: #999;
+    text-align: center;
+  }
+}
+
 .text-xxl {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -560,14 +734,32 @@ img {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 900px) {
+  .text-xl {
+    font-size: 1.5rem;
+  }
+}
+
 .text-lg {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
+@media (max-width: 900px) {
+  .text-lg {
+    font-size: 1.3rem;
+  }
+}
+
 .text-md {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .text-md {
+    font-size: 1rem;
+  }
 }
 
 .text-sm {
@@ -611,6 +803,59 @@ img {
   background: url("../resources/images/netflix_showcase_background.jpg") no-repeat center center/cover;
 }
 
+@media (max-width: 2560px) {
+  .landing-page-showcase .nav-simple {
+    height: 150px;
+  }
+  .landing-page-showcase .nav-simple #logo {
+    width: 400px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  .landing-page-showcase .nav-simple a {
+    border-radius: 5px;
+    margin-right: 40px;
+  }
+  .landing-page-showcase .nav-simple a,
+  .landing-page-showcase .nav-simple p {
+    padding: 15px 30px;
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .landing-page-showcase .nav-simple {
+    height: 90px;
+  }
+  .landing-page-showcase .nav-simple #logo {
+    width: 200px;
+  }
+  .landing-page-showcase .nav-simple a {
+    border-radius: 2px;
+    margin-right: 20px;
+  }
+  .landing-page-showcase .nav-simple a,
+  .landing-page-showcase .nav-simple p {
+    padding: 7px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-page-showcase .nav-simple #logo {
+    width: 160px;
+    position: relative;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .landing-page-showcase .nav-simple p {
+    margin-left: auto;
+  }
+}
+
 .landing-page-showcase::after {
   content: "";
   position: absolute;
@@ -622,6 +867,14 @@ img {
   background: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
           box-shadow: inset 2em 1em 200px 20px #000, inset -1.5em 0 100px 20px #000;
+}
+
+@media (max-width: 900px) {
+  .landing-page-showcase::after {
+    background: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 -100px 50px 10px rgba(0, 0, 0, 0.9);
+            box-shadow: inset 0 -100px 50px 10px rgba(0, 0, 0, 0.9);
+  }
 }
 
 .landing-page-showcase-content {
@@ -665,6 +918,59 @@ img {
           transform: translate(50%, 15%);
 }
 
+@media (max-width: 2560px) {
+  .landing-page-showcase-content {
+    padding-top: 24rem;
+  }
+  .landing-page-showcase-content h1 {
+    font-size: 8em;
+    line-height: 1;
+  }
+  .landing-page-showcase-content p {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .landing-page-showcase-content {
+    padding-top: 15rem;
+  }
+  .landing-page-showcase-content h1 {
+    font-size: 5.2rem;
+    line-height: 1.1;
+  }
+  .landing-page-showcase-content p {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-page-showcase-content {
+    padding-top: 35rem;
+  }
+  .landing-page-showcase-content h1 {
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+  .landing-page-showcase-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .landing-page-showcase-content {
+    padding-top: 8rem;
+  }
+  .landing-page-showcase-content h1 {
+    font-size: 3.2rem;
+    line-height: 1;
+  }
+  .landing-page-showcase-content p {
+    font-size: 1.5rem;
+  }
+}
+
 .landing-page-mobile-top {
   height: 70px;
   padding: 20px 10px 0;
@@ -695,6 +1001,20 @@ img {
 
 .landing-page-mobile-top .signin-mobile:active {
   text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .landing-page-mobile-top {
+    height: 50px;
+    padding: 10px 5px 0;
+  }
+  .landing-page-mobile-top #logo {
+    width: 100px;
+  }
+  .landing-page-mobile-top .signin-mobile {
+    padding-top: 8px;
+    font-size: 0.9rem;
+  }
 }
 
 .mobile-selling-points-card {
@@ -810,6 +1130,12 @@ img {
 .tab-content {
   position: relative;
   padding: 3rem 0;
+}
+
+@media (max-width: 900px) {
+  .hide-sm {
+    display: none;
+  }
 }
 
 #tab-1-content .tab-1-content-inner {
@@ -1057,270 +1383,5 @@ img {
 .login-form-bottom-new p {
   margin-top: 0;
   margin-right: 10px;
-}
-
-@media (max-width: 2560px) {
-  .landing-page-showcase-content {
-    padding-top: 24rem;
-  }
-  .landing-page-showcase-content h1 {
-    font-size: 8em;
-    line-height: 1;
-  }
-  .landing-page-showcase-content p {
-    font-size: 3rem;
-  }
-  .login-form {
-    margin-top: 201px;
-  }
-  .landing-page-showcase .nav-simple {
-    height: 150px;
-  }
-  .landing-page-showcase .nav-simple #logo {
-    width: 400px;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    left: 50%;
-  }
-  .landing-page-showcase .nav-simple a {
-    border-radius: 5px;
-    margin-right: 40px;
-  }
-  .landing-page-showcase .nav-simple a,
-  .landing-page-showcase .nav-simple p {
-    padding: 15px 30px;
-    font-size: 2.2rem;
-  }
-  .nav-simple #logo {
-    width: 400px;
-    position: relative;
-    left: 0;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  .nav-simple p {
-    margin-left: auto;
-  }
-  .btn-xl {
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 1920px) {
-  .login-form {
-    margin-top: 91px;
-  }
-  .landing-page-showcase-content {
-    padding-top: 15rem;
-  }
-  .landing-page-showcase-content h1 {
-    font-size: 5.2rem;
-    line-height: 1.1;
-  }
-  .landing-page-showcase-content p {
-    font-size: 2rem;
-    line-height: 1.25;
-  }
-  .nav-simple {
-    height: 90px;
-  }
-  .nav-simple #logo {
-    width: 200px;
-  }
-  .landing-page-showcase .nav-simple {
-    height: 90px;
-  }
-  .landing-page-showcase .nav-simple #logo {
-    width: 200px;
-  }
-  .landing-page-showcase .nav-simple a {
-    border-radius: 2px;
-    margin-right: 20px;
-  }
-  .landing-page-showcase .nav-simple a,
-  .landing-page-showcase .nav-simple p {
-    padding: 7px;
-    font-size: 1rem;
-  }
-  .btn-xl {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .landing-page-showcase .nav-simple #logo {
-    width: 160px;
-    position: relative;
-    left: 0;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  .landing-page-showcase .nav-simple p {
-    margin-left: auto;
-  }
-  .landing-page-showcase::after {
-    background: rgba(0, 0, 0, 0);
-    -webkit-box-shadow: inset 0 -100px 50px 10px rgba(0, 0, 0, 0.9);
-            box-shadow: inset 0 -100px 50px 10px rgba(0, 0, 0, 0.9);
-  }
-  .hide-sm {
-    display: none;
-  }
-  .landing-page-showcase-content {
-    padding-top: 35rem;
-  }
-  .landing-page-showcase-content h1 {
-    font-size: 3.2rem;
-    line-height: 1;
-  }
-  .landing-page-showcase-content p {
-    font-size: 1.5rem;
-  }
-  .footer .footer-cols {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .btn-xl {
-    font-size: 1.5rem;
-    padding: 1.4rem 2rem;
-  }
-  .text-xl {
-    font-size: 1.5rem;
-  }
-  .text-lg {
-    font-size: 1.3rem;
-  }
-  .text-md {
-    font-size: 1rem;
-  }
-  .signup-table thead tr th {
-    padding: 0;
-  }
-  .signup-table .btn-selection {
-    position: relative;
-    margin-left: 2rem;
-    margin-right: 1rem;
-    max-width: 8rem;
-    padding: 2rem;
-  }
-  .signup-table td {
-    padding: 0.4rem 0.6rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .nav-simple #logo {
-    position: relative;
-    left: 0;
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  .nav-simple p {
-    margin-left: auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .nav-simple {
-    height: 75px;
-  }
-  .signup-page-2-top {
-    text-align: center;
-  }
-  .signup-table thead tr th {
-    padding: 0;
-  }
-  .signup-table .btn-selection {
-    left: 0rem;
-    max-width: 8rem;
-    padding: 2rem;
-  }
-  .signup-table td {
-    padding: 0.4rem 0.6rem;
-  }
-  .signup-table td:first-child {
-    color: #999;
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .login-form-container {
-    display: relative;
-    padding: 0;
-    background: none;
-    padding: 0 10px;
-  }
-  .login-form {
-    display: absolute;
-    width: 100%;
-    padding: 0;
-  }
-  .nav-simple .logo-alone {
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 540px) {
-  .footer p {
-    color: #999;
-  }
-  .footer {
-    margin-bottom: 80px;
-  }
-}
-
-@media (max-height: 600px) {
-  .landing-page-showcase-content {
-    padding-top: 8rem;
-  }
-  .landing-page-showcase-content h1 {
-    font-size: 3.2rem;
-    line-height: 1;
-  }
-  .landing-page-showcase-content p {
-    font-size: 1.5rem;
-  }
-  .btn-xl {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-height: 400px) {
-  .landing-page-showcase-content {
-    padding-top: 5rem;
-  }
-  .landing-page-showcase-content h1 {
-    font-size: 3.2rem;
-    line-height: 1;
-  }
-  .landing-page-showcase-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .nav-simple {
-    height: 50px;
-    padding: 10px 5px 0;
-  }
-  .nav-simple #logo {
-    width: 100px;
-  }
-  .landing-page-mobile-top {
-    height: 50px;
-    padding: 10px 5px 0;
-  }
-  .landing-page-mobile-top #logo {
-    width: 100px;
-  }
-  .landing-page-mobile-top .signin-mobile {
-    padding-top: 8px;
-    font-size: 0.9rem;
-  }
-  .btn-xl {
-    font-size: 1.1rem;
-  }
 }
 /*# sourceMappingURL=main.css.map */
