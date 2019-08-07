@@ -2,18 +2,17 @@
 .signup-table {
     width: 100%;
     margin-top: 3rem;
-    border-collapse: separate;
-    border-spacing: 15px;
+    border-collapse: collapse;
+    border-spacing: 1rem 0;
     .btn-selection {
         background: map-get($colors, darkRed);
         color: white;
         padding: 2rem;
-        margin: 0 10px;
         min-width: 10rem;
         max-width: 10rem;
         text-align: center;
         box-shadow: 0 1px 0 rgba(0,0,0,0.45);
-        border-radius: 2px;
+        border-radius: 10px;
         outline: none;
         border: none;
         cursor: pointer;
@@ -28,19 +27,18 @@
         text-transform: uppercase;
         padding: 4rem;
     }
-    tbody tr td {
+    td {
         padding: 0.8rem 1.2rem;
+        padding-left: 0;
         text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
     }
-    tbody tr td:nth-child(1) {
+    td:nth-child(1) {
         color: black;
         font-size: 1.1rem;
         text-align: left;
     }
-    tbody tr td:not(:first-child) {
+    td:not(:first-child) {
         color: #999;
-    }
-    tbody tr td {
-        border-bottom: 1px solid rgba(0,0,0,0.2);
     }
 }

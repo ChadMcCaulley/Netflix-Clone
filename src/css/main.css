@@ -495,21 +495,20 @@ img {
 .signup-table {
   width: 100%;
   margin-top: 3rem;
-  border-collapse: separate;
-  border-spacing: 15px;
+  border-collapse: collapse;
+  border-spacing: 1rem 0;
 }
 
 .signup-table .btn-selection {
   background: #B20710;
   color: white;
   padding: 2rem;
-  margin: 0 10px;
   min-width: 10rem;
   max-width: 10rem;
   text-align: center;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  border-radius: 2px;
+  border-radius: 10px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -528,23 +527,21 @@ img {
   padding: 4rem;
 }
 
-.signup-table tbody tr td {
+.signup-table td {
   padding: 0.8rem 1.2rem;
+  padding-left: 0;
   text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.signup-table tbody tr td:nth-child(1) {
+.signup-table td:nth-child(1) {
   color: black;
   font-size: 1.1rem;
   text-align: left;
 }
 
-.signup-table tbody tr td:not(:first-child) {
+.signup-table td:not(:first-child) {
   color: #999;
-}
-
-.signup-table tbody tr td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .text-xxl {
@@ -889,7 +886,7 @@ img {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #fff;
 }
 
@@ -1266,7 +1263,7 @@ img {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 400px) {
   .nav-simple {
     height: 50px;
     padding: 10px 5px 0;

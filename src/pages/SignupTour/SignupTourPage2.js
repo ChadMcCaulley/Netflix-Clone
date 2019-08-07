@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import NavbarLight from "../../components/Navbars/NavbarLight";
-import {FaTimes, FaCheck} from "react-icons/fa";
+import {FaTimes, FaCheck, FaBackspace} from "react-icons/fa";
 
 export default class SignupTourPage2 extends Component {
     constructor(props) {
@@ -27,7 +27,6 @@ export default class SignupTourPage2 extends Component {
     render() {
         const endOfFree = this.endOfFree();
         const {currentBtn} = this.state;
-        console.log(currentBtn);
         const btnSelectionActive = "btn-selection btn-active";
         const btnSelectionInactive = "btn-selection";
         const activeColumn = {color: "#E50914"}
@@ -47,7 +46,7 @@ export default class SignupTourPage2 extends Component {
                         </div>
                         <table className="signup-table">
                             <thead>
-                                <tr className="plan-selection-buttons">
+                                <tr>
                                     <th></th>
                                     <th
                                         onClick={this.selectColumn}
