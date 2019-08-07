@@ -500,12 +500,17 @@ img {
 }
 
 .signup-table .btn-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #B20710;
   color: white;
-  padding: 2rem;
-  min-width: 10rem;
+  padding: 4rem;
   max-width: 10rem;
-  text-align: center;
+  margin-bottom: 1rem;
   -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
           box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
   border-radius: 10px;
@@ -524,7 +529,8 @@ img {
 
 .signup-table thead tr th {
   text-transform: uppercase;
-  padding: 4rem;
+  letter-spacing: 0.3ch;
+  padding: 0 .5rem;
 }
 
 .signup-table td {
@@ -1142,7 +1148,7 @@ img {
   }
 }
 
-@media (max-width: 927px) {
+@media (max-width: 900px) {
   .landing-page-showcase .nav-simple #logo {
     width: 160px;
     position: relative;
@@ -1188,6 +1194,19 @@ img {
   .text-md {
     font-size: 1rem;
   }
+  .signup-table thead tr th {
+    padding: 0;
+  }
+  .signup-table .btn-selection {
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    max-width: 8rem;
+    padding: 2rem;
+  }
+  .signup-table td {
+    padding: 0.4rem 0.6rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1205,6 +1224,24 @@ img {
 @media (max-width: 700px) {
   .nav-simple {
     height: 75px;
+  }
+  .signup-page-2-top {
+    text-align: center;
+  }
+  .signup-table thead tr th {
+    padding: 0;
+  }
+  .signup-table .btn-selection {
+    left: 0rem;
+    max-width: 8rem;
+    padding: 2rem;
+  }
+  .signup-table td {
+    padding: 0.4rem 0.6rem;
+  }
+  .signup-table td:first-child {
+    color: #999;
+    text-align: center;
   }
 }
 

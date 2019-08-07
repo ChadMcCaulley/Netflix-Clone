@@ -145,7 +145,7 @@
 }
 
 
-$landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, contentDown: 927px, showcase-top-smaller: 700px, login-form: 600px, mobile: 540px, mobile-small: 400px );
+$landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, halfHD: 900px, showcase-top-smaller: 700px, login-form: 600px, mobile: 540px, mobile-small: 400px );
 
 // Media Queries
 @media (max-width: map-get($landingBrakePoints, QHD)) {
@@ -235,7 +235,7 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
         font-size: 2rem;
     }
 }
-@media(max-width: map-get($landingBrakePoints, contentDown)) {
+@media(max-width: map-get($landingBrakePoints, halfHD)) {
     .landing-page-showcase .nav-simple {
         #logo {
             width: 160px;
@@ -280,6 +280,21 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
     .text-md {
         font-size: 1rem;
     }
+    .signup-table{
+        thead tr th{
+            padding: 0;
+        }
+        .btn-selection{
+            position: relative;
+            margin-left: 2rem;
+            margin-right: 1rem;
+            max-width: 8rem;
+            padding: 2rem;
+        }
+        td {
+            padding: 0.4rem 0.6rem;
+        }
+    }
 }
 @media (max-width: map-get($landingBrakePoints, logoLeft)) {
     .nav-simple {
@@ -296,6 +311,26 @@ $landingBrakePoints: ( UHD: 3840, QHD: 2560px, HD: 1920px, logoLeft: 1000px, con
 @media (max-width: map-get($landingBrakePoints, showcase-top-smaller)) {
     .nav-simple {
         height: 75px;
+    }
+    .signup-page-2-top{
+        text-align: center;
+    }
+    .signup-table{
+        thead tr th{
+            padding: 0;
+        }
+        .btn-selection{
+            left: 0rem;
+            max-width: 8rem;
+            padding: 2rem;
+        }
+        td {
+            padding: 0.4rem 0.6rem;
+        }
+        td:first-child{
+            color: #999;
+            text-align: center;
+        }
     }
 }
 @media (max-width: map-get($landingBrakePoints, login-form)) {

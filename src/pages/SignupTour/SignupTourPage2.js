@@ -1,14 +1,29 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import NavbarLight from "../../components/Navbars/NavbarLight";
-import {FaTimes, FaCheck, FaBackspace} from "react-icons/fa";
+import {FaTimes, FaCheck} from "react-icons/fa";
 
 export default class SignupTourPage2 extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentBtn: "btn-3"
+            currentBtn: "btn-3",
+            tableWide: true,
+            width: 0
         }
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({width: window.innerWidth, height: window.innerHeight});
     }
     endOfFree() {
         let today = new Date();
@@ -26,10 +41,11 @@ export default class SignupTourPage2 extends Component {
     }
     render() {
         const endOfFree = this.endOfFree();
-        const {currentBtn} = this.state;
+        const {currentBtn, width} = this.state;
         const btnSelectionActive = "btn-selection btn-active";
         const btnSelectionInactive = "btn-selection";
-        const activeColumn = {color: "#E50914"}
+        const activeColumn = {color: "#E50914"};
+        const tableWide = width >= 700;
         return (
             <div>
                 <div className="white-background"></div>
@@ -47,66 +63,66 @@ export default class SignupTourPage2 extends Component {
                         <table className="signup-table">
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th
-                                        onClick={this.selectColumn}
-                                        data-id="btn-1"
-                                        className={currentBtn === "btn-1"
-                                        ? btnSelectionActive
-                                        : btnSelectionInactive}>Basic</th>
-                                    <th
-                                        onClick={this.selectColumn}
-                                        data-id="btn-2"
-                                        className={currentBtn === "btn-2"
-                                        ? btnSelectionActive
-                                        : btnSelectionInactive}>Standard</th>
-                                    <th
-                                        onClick={this.selectColumn}
-                                        data-id="btn-3"
-                                        className={currentBtn === "btn-3"
-                                        ? btnSelectionActive
-                                        : btnSelectionInactive}>Premium</th>
+                                    {tableWide && <th></th>}
+                                    <th onClick={this.selectColumn} data-id="btn-1">
+                                        <div 
+                                            className={currentBtn === "btn-1"
+                                            ? btnSelectionActive
+                                            : btnSelectionInactive}>Basic</div>
+                                    </th>
+                                    <th onClick={this.selectColumn} data-id="btn-2">
+                                        <div 
+                                            className={currentBtn === "btn-2"
+                                            ? btnSelectionActive
+                                            : btnSelectionInactive}>Standard</div>
+                                    </th>
+                                    <th onClick={this.selectColumn} data-id="btn-3">
+                                        <div 
+                                            className={currentBtn === "btn-3"
+                                            ? btnSelectionActive
+                                            : btnSelectionInactive}>Premium</div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>{endOfFree}</td>
+                                    {tableWide &&<td>{endOfFree}</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}>$8.99</td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}>$12.99</td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}>$15.99</td>
                                 </tr>
                                 <tr>
-                                    <td>HD available</td>
+                                    {tableWide &&<td>HD available</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}><FaTimes/></td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}><FaCheck/></td>
                                 </tr>
                                 <tr>
-                                    <td>Ultra HD available</td>
+                                    {tableWide &&<td>Ultra HD available</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}><FaTimes/></td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}><FaTimes/></td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}><FaCheck/></td>
                                 </tr>
                                 <tr>
-                                    <td>Screens you can watch on at the same time</td>
+                                    {tableWide &&<td>Screens you can watch on at the same time</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}>1</td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}>2</td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}>4</td>
                                 </tr>
                                 <tr>
-                                    <td>Watch on your laptop, TV, phone and tablet</td>
+                                    {tableWide &&<td>Watch on your laptop, TV, phone and tablet</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}><FaCheck/></td>
                                 </tr>
                                 <tr>
-                                    <td>Cancel anytime</td>
+                                    {tableWide &&<td>Cancel anytime</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}><FaCheck/></td>
                                 </tr>
                                 <tr>
-                                    <td>First month free</td>
+                                    {tableWide &&<td>First month free</td>}
                                     <td style={currentBtn === "btn-1" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-2" ? activeColumn : {}}><FaCheck/></td>
                                     <td style={currentBtn === "btn-3" ? activeColumn : {}}><FaCheck/></td>
