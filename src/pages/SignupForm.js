@@ -5,7 +5,7 @@ import NavbarLight from "../components/Navbars/NavbarLight";
 
 const SignupForm = () => {
     const account = {_id: 123}; // Temporary. Will be replaced when backend is connected
-    const accountCreationUrl = `/signup-tour/create-account/${account._id}`;
+    const accountCreationUrl = `/${account._id}/user-page`;
     return (
         <div>
             <div className="white-background"></div>

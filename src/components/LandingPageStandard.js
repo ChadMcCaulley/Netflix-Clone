@@ -68,7 +68,7 @@ class LandingPageStandard extends Component {
                             ? activeTab
                             : inactiveTab}
                             onClick={this.handleTabClick}>
-                            <FaDoorOpen size={42} className="tab-icon"/>
+                            <FaDoorOpen className="tab-icon"/>
                             <p className="hide-sm">
                                 Cancel anytime
                             </p>
@@ -79,7 +79,7 @@ class LandingPageStandard extends Component {
                             ? activeTab
                             : inactiveTab}
                             onClick={this.handleTabClick}>
-                            <FaTabletAlt size={42} className="tab-icon"/>
+                            <FaTabletAlt className="tab-icon"/>
                             <p className="hide-sm">
                                 Watch anywhere
                             </p>
@@ -90,7 +90,7 @@ class LandingPageStandard extends Component {
                             ? activeTab
                             : inactiveTab}
                             onClick={this.handleTabClick}>
-                            <FaTags size={42} className="tab-icon"/>
+                            <FaTags className="tab-icon"/>
                             <p className="hide-sm">
                                 Pick your price
                             </p>
@@ -153,49 +153,49 @@ class LandingPageStandard extends Component {
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th>Basic</th>
-                                            <th>Standard</th>
-                                            <th>Premium</th>
+                                            <th className="text-md text-white">Basic</th>
+                                            <th className="text-md text-white">Standard</th>
+                                            <th className="text-md text-white">Premium</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td> {endOfFree}</td>
                                             <td>$8.99</td>
                                             <td>$12.99</td>
                                             <td>$15.99</td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>HD available</td>
                                             <td><FaTimes/></td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>Ultra HD available</td>
                                             <td><FaTimes/></td>
                                             <td><FaTimes/></td>
                                             <td><FaCheck/></td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>Screens you can watch on at the same time</td>
                                             <td>1</td>
                                             <td>2</td>
                                             <td>4</td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>Watch on your laptop, TV, phone and tablet</td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>Cancel anytime</td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>
                                         </tr>
-                                        <tr>
+                                        <tr className="text-table">
                                             <td>First month free</td>
                                             <td><FaCheck/></td>
                                             <td><FaCheck/></td>

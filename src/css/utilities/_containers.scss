@@ -1,5 +1,5 @@
 .error-message-container {
-    height: 100vh;
+    height: calc(100vh - #{map-get($navHeights, UHD)});
     width: 100%;
     background: map-get($colors, mobileCards);
     display: flex;
@@ -7,6 +7,18 @@
     align-content: center;
     text-align: center;
     padding-top: 150px;
+    @include respond-to(QHD){
+        height: calc(100vh - #{map-get($navHeights, QHD)});
+    }
+    @include respond-to(HD){
+        height: calc(100vh - #{map-get($navHeights, HD)});
+    }
+    @include respond-to(tablet){
+        height: calc(100vh - #{map-get($navHeights, tablet)});
+    }
+    @include respond-to(mobile-small){
+        height: calc(100vh - #{map-get($navHeights, mobile-small)});
+    }
 }
 
 .container {

@@ -41,9 +41,26 @@
     }
 }
 .btn-lg {
-    font-size: 1rem;
-    padding: 0.8rem 1.3rem;
+    font-size: 4rem;
+    padding: 1.3rem 2rem;
     text-transform: uppercase;
+    @include respond-to(QHD){
+        font-size: 2.5rem;
+        padding: 0.8rem 1.3rem;
+    }
+    @include respond-to(HD){
+        font-size: 1.2rem;
+    }
+    @include respond-to(half-HD){
+        font-size: 1rem;
+        padding: 1.4rem 2rem;
+    }
+    @include respond-to(mobile-small){
+        font-size: 0.7rem;
+    }
+    @include respond-to-height(phone){
+        font-size: 0.6rem;
+    }
 }
 .btn-dark{
     background: none;

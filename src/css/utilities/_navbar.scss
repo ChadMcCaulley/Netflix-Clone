@@ -12,23 +12,22 @@
     flex-wrap: nowrap;
     align-items: center;
     position: absolute;
-    height: 200px;
+    height: map-get($navHeights, UHD);
     width: 100%;
     #logo {
         position: absolute;
         transform: translate(-50%, -50%);
-        left: 50%;
-        width: 500px;
+        left: 0;
+        margin-left: 18rem;
+        width: map-get($logoWidths, UHD);
         cursor: pointer;
     }
     .logo-alone {
         position: absolute;
+        margin-left: 4rem;
         left: 0;
-        width: 500px;
+        width: map-get($logoWidths, UHD);
         cursor: pointer;
-        @include respond-to(phablet){
-            padding: 0 15px;
-        }
     }
     a {
         font-size: 3rem;
@@ -44,53 +43,132 @@
         color: black;
         padding: 0;
         margin-right: 2rem;
-        font-size: 1.4rem;
+        font-size: 4rem;
         text-decoration: none;
         &:hover {
             text-decoration: underline;
         }
     }
     @include respond-to(QHD){
+        height: map-get($navHeights, QHD);
         #logo {
-            width: 400px;
-            position: relative;
-            left: 0;
-            transform: translate(0);
+            width: map-get($logoWidths, QHD);
+            margin-left: 14rem;
+        }
+        .logo-alone{
+            margin-left: 0rem;
         }
         p {
             margin-left: auto;
         }
+        .signin-light{
+            font-size: 2.5rem;
+        }
     }
     @include respond-to(HD){
-        height: 90px;
+        height: map-get($navHeights, HD);
         #logo {
-            width: 200px;
+            width: map-get($logoWidths, HD);
+            margin-left: 7rem;
+        }
+        .signin-light{
+            font-size: 1.4rem;
         }
     }
     @include respond-to(tablet){
-        height: 75px;
-        #logo {
-            position: relative;
-            left: 0;
-            transform: translate(0);
-        }
+        height: map-get($navHeights, tablet);
         p {
             margin-left: auto;
         }
     }
     @include respond-to(mobile-small){
-        height: 50px;
-        padding: 10px 5px 0;
+        height: map-get($navHeights, mobile-small);
         #logo {
-            width: 100px;
+            width: map-get($logoWidths, mobile-small);
+            margin-left: 3.5rem;
+        }
+        .signin-light{
+            font-size: 1rem;
+            margin-top: 5px;
         }
     }
 }
-.error-page .logo-alone {
+
+.error-page .nav-black{
     background: black;
     width: 100%;
-    border-radius: 0;
+    height: map-get($navHeights, UHD);
+    @include respond-to(QHD){
+        height: map-get($navHeights, QHD);
+    }
+    @include respond-to(HD){
+        height: map-get($navHeights, HD);
+    }
+    @include respond-to(tablet){
+        height: map-get($navHeights, tablet);
+    }
+    @include respond-to(mobile-small){
+        height: map-get($navHeights, mobile-small);
+    }
 }
 .nav-light {
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    @include respond-to(HD){
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+}
+
+.nav-full-container{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    bottom: 50%;
+    top: 50%;
+    width: 100%;
+    .nav-link{
+        margin-right: 1rem;
+        align-self: center;
+        &:hover{
+            color: #999;
+        }
+    }
+    .nav-link:last-child{
+        margin-right: 500px;
+    }
+    .text-sm{
+        margin-bottom: 0;
+    }
+    .nav-icon{
+        color: white;
+        font-size: 1.75rem;
+        transform: translate(-50%, -50%);
+        margin-right: 0rem;
+    }
+    #search-icon{
+        margin-left: auto;
+        margin-right: 1rem; 
+    }
+    .nav-user-icon{
+        margin-right: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        align-self: center;
+    }
+}
+
+.nav-full{
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 28px;
+    height: 250px;
+    width: 100%;
+    #logo{
+        width: map-get($logoWidths, UHD);
+        margin-right: 1.5rem;
+        transform: translateY(-50%);
+    }
 }

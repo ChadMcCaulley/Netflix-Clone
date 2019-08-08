@@ -4,13 +4,18 @@
     height: 93vh;
     background: map-get($images, showcaseBackground) no-repeat center center/cover;
     .nav-simple {
+        height: map-get($navHeights, UHD);
+        #logo{
+            widows: map-get($logoWidths, UHD);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            margin-left: 0; 
+        }
         @include respond-to(QHD) {
-            height: 150px;
+            height: map-get($navHeights, QHD);
             #logo {
-                width: 400px;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                left: 50%;
+                width: map-get($logoWidths, QHD);
             }
             a {
                 border-radius: 5px;
@@ -23,9 +28,9 @@
             }
         }
         @include respond-to(HD) {
-            height: 90px;
+            height: map-get($navHeights, HD);
             #logo {
-                width: 200px;
+                width: map-get($logoWidths, HD);
             }
             a {
                 border-radius: 2px;
@@ -74,7 +79,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 30rem;
+    padding-top: 45rem;
     h1 {
         font-weight: 600;
         font-size: 11rem;
@@ -92,7 +97,7 @@
         transform: translate(50%, 15%);
     }
     @include respond-to(QHD) {
-        padding-top: 24rem;
+        padding-top: 28rem;
         h1 {
             font-size: 8em;
             line-height: 1;
@@ -102,7 +107,7 @@
         }
     }
     @include respond-to(HD) {
-        padding-top: 15rem;
+        padding-top: 18rem;
         h1 {
             font-size: 5.2rem;
             line-height: 1.1;
@@ -113,7 +118,7 @@
         }
     }
     @include respond-to(half-HD) {
-        padding-top: 35rem;
+        padding-top: 38rem;
         h1 {
             font-size: 3.2rem;
             line-height: 1;
@@ -248,8 +253,8 @@
             color: #fff;
         }
     }
-    .tab p {
-        font-size: 1.2rem;
+    p {
+        font-size: 4rem;
         padding-top: 0.5rem;
         color: #999;
     }
@@ -260,12 +265,31 @@
         }
         border-bottom: map-get($colors, brightRed) 4px solid;
     }
+    .tab-icon{
+        font-size: 10em;
+    }
+    @include respond-to(QHD){
+        .tab-icon{
+            font-size: 6em;
+        }
+        p{
+            font-size: 2.5rem;
+        }
+    }
+    @include respond-to(HD){
+        .tab-icon{
+            font-size: 3.2em;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+    }
 }
 
 // tab content
 .tab-content {
     position: relative;
-    padding: 3rem 0;  
+    padding: 3rem 0; 
 }
 .hide-sm{
     @include respond-to(half-HD){

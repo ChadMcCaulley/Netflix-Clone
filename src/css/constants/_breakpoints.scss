@@ -1,5 +1,5 @@
 $brakePoints: ( 
-    UHD: 3840px, 
+    UHD: 2561px, 
     QHD: 2560px, 
     HD: 1920px, 
     half-HD: 900px, 
@@ -19,6 +19,12 @@ $heightBreakPoints: (
         @media (max-width: map-get($brakePoints, $brakepoint)){
             @content;
         }
+    }
+}
+
+@mixin respond-to-UHD(){
+    @media (min-width: map-get($brakePoints, UHD)){
+        @content;
     }
 }
 

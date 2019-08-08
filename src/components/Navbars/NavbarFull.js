@@ -10,13 +10,13 @@ export default function NavbarFull({logoOnly}) {
         <nav className="nav-full">
             {logoOnly === "true" && (
                 <div className="nav-full-container">
-                    <Link to="/browse"><img src={Logo_Full} alt="NETFLIX" className="logo"/></Link>
+                    <Link to="/" className="nav-full-logo-only"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
                 </div>
             )}
             {logoOnly === "false" && (
                 <div>
                     <div className="nav-full-container">
-                        <Link to="/browse"><img src={Logo_Full} alt="NETFLIX" className="logo"/></Link>
+                        <Link to="/"><img src={Logo_Full} alt="NETFLIX" className="logo"/></Link>
                         <Link to="/browse/home" className="nav-link text-sm">
                             Home
                         </Link>
