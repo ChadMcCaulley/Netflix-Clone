@@ -2,16 +2,10 @@
 .signup-page-2-top{
     margin-top: map-get($navHeights, UHD);
     @include respond-to(QHD){
-        margin-top: map-get($navHeights, QHD)
+        margin-top: map-get($navHeights, QHD);
     }
     @include respond-to(HD){
-        margin-top: map-get($navHeights, HD)
-    }
-    @include respond-to(HD){
-        margin-top: map-get($navHeights, HD)
-    }
-    @include respond-to(tablet){
-        text-align: center;
+        margin-top: 0;
     }
 }
 

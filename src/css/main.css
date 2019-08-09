@@ -820,19 +820,7 @@ img {
 
 @media (max-width: 1920px) {
   .signup-page-2-top {
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 1920px) {
-  .signup-page-2-top {
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 700px) {
-  .signup-page-2-top {
-    text-align: center;
+    margin-top: 0;
   }
 }
 

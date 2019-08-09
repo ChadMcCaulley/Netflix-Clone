@@ -53,12 +53,12 @@ export default class SignupTourPage2 extends Component {
                     <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
                     <form className="signup-page-2-inner">
                         <div className="signup-page-2-top">
-                            <p className="text-md">
+                            <p className="text-md text-black">
                                 Step <strong>1</strong> of <strong>3</strong>
                             </p>
-                            <p className="text-xl text-bold">
+                            <p className="text-xl text-bold text-black">
                                 Choose the plan that's right for you</p>
-                            <p className="text-md">Downgrade or upgrade at any time</p>
+                            <p className="text-md text-black">Downgrade or upgrade at any time</p>
                         </div>
                         <table className="signup-table">
                             <thead>
