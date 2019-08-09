@@ -4,10 +4,16 @@
     margin-bottom: 1rem;
 }
 .text-xl {
-    font-size: 2rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
+    @include respond-to(QHD){
+        font-size: 4rem;
+    }
+    @include respond-to(HD){
+        font-size: 3rem;
+    }
     @include respond-to(half-HD){
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 .text-lg {
@@ -20,14 +26,20 @@
         font-size: 2rem;
     }
     @include respond-to(half-HD){
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 }
 .text-md {
-    font-size: 1.3rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    @include respond-to(QHD){
+        font-size: 2rem;
+    }
+    @include respond-to(HD){
+        font-size: 1.2rem;
+    }
     @include respond-to(half-HD){
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 .text-table{
@@ -46,6 +58,9 @@
 }
 .text-dark {
     color: #999;
+    &:hover{
+        color: #ccc;
+    }
 }
 .text-white{
     color: #FFF;

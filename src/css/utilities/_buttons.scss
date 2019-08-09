@@ -16,13 +16,20 @@
         background: lighten(map-get($colors, brightRed), 5%);
     }
 }
+.btn-blue{
+    color: #fff;
+    background: map-get($colors, brightBlue);
+    padding: 20px;
+    text-align: center;
+    margin: 2rem 0 4rem;
+}
 .btn-rounded {
     border-radius: 5px;
 }
 .btn-xl {
+    text-transform: uppercase;
     font-size: 5rem;
     padding: 1.5rem 3.2rem;
-    text-transform: uppercase;
     @include respond-to(QHD){
         font-size: 4rem;
     }
@@ -41,7 +48,7 @@
     }
 }
 .btn-lg {
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 1.3rem 2rem;
     text-transform: uppercase;
     @include respond-to(QHD){
@@ -56,24 +63,23 @@
         padding: 1.4rem 2rem;
     }
     @include respond-to(mobile-small){
-        font-size: 0.7rem;
-    }
-    @include respond-to-height(phone){
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 }
 .btn-dark{
     background: none;
     border: #999 solid;
     color: #999;
-    font-size: 1.1rem;
     font-weight: 700;
     align-self: center;
     margin-top: 1rem;
+    outline:none;
+    &:hover{
+        cursor: pointer;
+        color: #ccc;
+    }
 }
-.btn-dark:hover{
-    background: none;
-}
+
 // Mobile landing page  button 
 .btn-bottom{
     width: 100%;

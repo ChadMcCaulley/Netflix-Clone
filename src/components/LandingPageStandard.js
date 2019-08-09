@@ -126,17 +126,17 @@ class LandingPageStandard extends Component {
                                     <div>
                                         <img src={Tab_2_TV} alt="tv"/>
                                         <p className="text-md"> Watch on your TV </p>
-                                        <p className="text-dark"> Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                                        <p className="text-md text-dark"> Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
                                     </div>
                                     <div>
                                         <img src={Tab_2_Mobile} alt="tv"/>
                                         <p className="text-md"> Watch instantly or download for later </p>
-                                        <p className="text-dark"> Available on phone and tablet, wherever you go.</p>
+                                        <p className="text-md text-dark"> Available on phone and tablet, wherever you go.</p>
                                     </div>
                                     <div>
                                         <img src={Tab_2_Computer} alt="tv"/>
                                         <p className="text-md"> Use any computer </p>
-                                        <p className="text-dark"> Watch right on Netflix.com.</p>
+                                        <p className="text-md text-dark"> Watch right on Netflix.com.</p>
                                     </div>
                                 </div>
                             </div>

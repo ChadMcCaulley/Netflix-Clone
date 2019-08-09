@@ -21,7 +21,7 @@ const SignupTourPage3 = () => {
                                 <IoIosPhonePortrait size={40} className="icon"/>
                             </div>
                         </div>
-                        <p className="step-number">
+                        <p className="text-md text-black">
                             Step <strong>
                                 2
                             </strong> of <strong>
@@ -30,7 +30,7 @@ const SignupTourPage3 = () => {
                         </p>
                         <p className="text-xl text-bold">
                             Create your account.</p>
-                        <p className="text-black">
+                        <p className="text-md text-black">
                             Netflix is personalized for you. Use your 
                             <br/>email and create a password to watch 
                             <br/>Netflix on any device at any time.

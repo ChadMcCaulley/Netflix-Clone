@@ -25,7 +25,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-    @include respond-to(half-HD){
-        grid-template-columns: repeat(2, 1fr);
+    p{
+        margin: 4rem 0;
+    }
+    @include respond-to(QHD){
+        p{
+            margin: 2rem 0;
+        }
+    }
+    @include respond-to(HD){
+        p{
+            margin: 0.5rem 0;
+        }
     }
 }

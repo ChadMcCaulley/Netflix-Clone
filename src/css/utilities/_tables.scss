@@ -1,4 +1,32 @@
 // Tables
+.signup-page-2-top{
+    margin-top: map-get($navHeights, UHD);
+    @include respond-to(QHD){
+        margin-top: map-get($navHeights, QHD)
+    }
+    @include respond-to(HD){
+        margin-top: map-get($navHeights, HD)
+    }
+    @include respond-to(HD){
+        margin-top: map-get($navHeights, HD)
+    }
+    @include respond-to(tablet){
+        text-align: center;
+    }
+}
+
+.signup-page-2-inner {
+    margin-top: 100px;
+    .btn {
+        position: relative;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
+    .input-field-container{
+        background: map-get($colors, inputGrey);
+    }
+}
 .signup-table {
     width: 100%;
     margin-top: 3rem;
@@ -7,31 +35,33 @@
     .btn-selection {
         display: flex;
         justify-content: center;
-        background: map-get($colors, darkRed);
+        background: lighten(map-get($colors, darkRed), 35%);
         color: white;
         padding: 4rem;
         max-width: 10rem;
-        margin-bottom: 1rem;
-        box-shadow: 0 1px 0 rgba(0,0,0,0.45);
-        border-radius: 10px;
+        margin: 0 0.5rem 1rem;
+        border-radius: 5px;
         outline: none;
         border: none;
         cursor: pointer;
         &:hover {
-            background: lighten(map-get($colors, brightRed), 5%);
+            background: map-get($colors, brightRed);
         }
     }
     .btn-active {
-        background: lighten(map-get($colors, brightRed), 5%);
+        background: map-get($colors, brightRed);
     }
-    thead tr th {
+    thead tr:not(:first-child) {
         text-transform: uppercase;
         letter-spacing: 0.3ch;
-        padding: 0 .5rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
     }
     td {
-        padding: 0.8rem 1.2rem;
-        padding-left: 0;
+        padding: 0.8rem 1.2rem 0.8rem 0;
         text-align: center;
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
@@ -43,34 +73,69 @@
     td:not(:first-child) {
         color: #999;
     }
-    @include respond-to(half-HD){
-        thead tr th{
-            padding: 0;
+    @include respond-to(HD) {
+        margin-top: 3rem;
+        border-collapse: collapse;
+        border-spacing: 1rem 0;
+        .btn-selection {
+            display: flex;
+            justify-content: center;
+            padding: 4rem;
+            max-width: 10rem;
+            margin: 0 0.5rem 1rem;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
         }
-        .btn-selection{
-            position: relative;
-            margin-left: 2rem;
-            margin-right: 1rem;
-            max-width: 8rem;
-            padding: 2rem;
+        thead tr:not(:first-child) {
+            text-transform: uppercase;
+            letter-spacing: 0.3ch;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
         }
         td {
-            padding: 0.4rem 0.6rem;
-        } 
+            padding: 0.8rem 1.2rem 0.8rem 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+        td:nth-child(1) {
+            color: black;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        td:not(:first-child) {
+            color: #999;
+        }
     }
-    @include respond-to(tablet){
-        thead tr th{
+    @include respond-to(half-HD) {
+        thead tr th {
             padding: 0;
+            letter-spacing: 0;
         }
-        .btn-selection{
-            left: 0rem;
+        .btn-selection {
+            position: relative;
             max-width: 8rem;
-            padding: 2rem;
+            padding: 3rem 4rem;
         }
         td {
             padding: 0.4rem 0.6rem;
         }
-        td:first-child{
+    }
+    @include respond-to(tablet) {
+        .btn-selection {
+            left: 0;
+            max-width: 5.5rem;
+            padding: 2rem;
+            margin: auto auto 0.5rem;
+        }
+        td {
+            padding: 0.4rem 0;
+        }
+        td:first-child {
             color: #999;
             text-align: center;
         }

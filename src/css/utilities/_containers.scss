@@ -49,7 +49,7 @@
 }
 
 .signup-tour-inner {
-    padding-top: 15rem;
+    margin-top: calc(#{map-get($navHeights, UHD)} * 2);
     text-align: center;
     .signup-tour-inner-top {
         display: flex;
@@ -64,20 +64,30 @@
         background: map-get($colors, brightRed);
         padding: 2px;
         border-radius: 100px;
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
+        font-size: 9rem;
+        @include respond-to(QHD){
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+        @include respond-to(HD){
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        @include respond-to(half-HD){
+            font-size: 2.5rem;
+            margin-bottom: .75rem;
+        }
     }
-    .step-number {
-        color: black;
+    .text-md{
         margin-bottom: 0;
     }
     .text-xl {
+        margin-top: 0;
         color: black;
     }
     .text-black {
         margin-bottom: 2rem;
-    }
-    .text-no-margin {
-        margin: 0;
     }
     .tour-list {
         color: black;
@@ -93,6 +103,12 @@
     }
     .btn-lg {
         width: 100%;
+    }
+    @include respond-to(QHD){
+        margin-top: calc(#{map-get($navHeights, QHD)} * 2);
+    }
+    @include respond-to(HD){
+        margin-top: calc(#{map-get($navHeights, HD)} * 2);
     }
 }
 .icons-container {
@@ -111,32 +127,3 @@
     }
 }
 
-.signup-page-2-top{
-    @include respond-to(tablet){
-        text-align: center;
-    }
-}
-
-.signup-page-2-inner {
-    margin-top: 91px;
-    p {
-        color: black;
-    }
-    .btn {
-        position: relative;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        width: 300px;
-    }
-    .btn-blue{
-        color: white;
-        background: map-get($colors, brightBlue);
-        padding: 20px;
-        text-align: center;
-        font-size: 1.2rem;
-        margin: 2rem 0 4rem;
-    }
-    .input-field-container{
-        background: map-get($colors, inputGrey);
-    }
-}

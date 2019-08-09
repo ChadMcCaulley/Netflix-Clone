@@ -12,8 +12,8 @@ const SignupTourPage1 = () => {
                 <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
                 <form className="signup-tour-inner">
                     <div className="signup-tour-inner-top">
-                        <FaCheckCircle id="check-icon-circle" size={42}/>
-                        <p className="step-number">
+                        <FaCheckCircle id="check-icon-circle"/>
+                        <p className="text-md text-black">
                             Step <strong>
                                 1
                             </strong> of <strong>
@@ -24,11 +24,11 @@ const SignupTourPage1 = () => {
                             Choose your plan</p>
                     </div>
                     <ul className="tour-list">
-                        <li>
+                        <li className="text-md">
                             <FaCheck id="check-icon"/>You won't be charged until after your free month.</li>
-                        <li>
+                        <li className="text-md">
                             <FaCheck id="check-icon"/>We'll remind you three days before your trial ends.</li>
-                        <li>
+                        <li className="text-md">
                             <FaCheck id="check-icon"/>No commitments, cancel anytime.</li>
                     </ul>
                     <Link to="/signup-tour/plans" className="btn btn-lg">see the plans</Link>

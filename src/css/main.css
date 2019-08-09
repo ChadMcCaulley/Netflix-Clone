@@ -57,14 +57,22 @@ img {
   background: #f6121d;
 }
 
+.btn-blue {
+  color: #fff;
+  background: #0070eb;
+  padding: 20px;
+  text-align: center;
+  margin: 2rem 0 4rem;
+}
+
 .btn-rounded {
   border-radius: 5px;
 }
 
 .btn-xl {
+  text-transform: uppercase;
   font-size: 5rem;
   padding: 1.5rem 3.2rem;
-  text-transform: uppercase;
 }
 
 @media (max-width: 2560px) {
@@ -99,7 +107,7 @@ img {
 }
 
 .btn-lg {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1.3rem 2rem;
   text-transform: uppercase;
 }
@@ -126,13 +134,7 @@ img {
 
 @media (max-width: 400px) {
   .btn-lg {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-height: 600px) {
-  .btn-lg {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -140,16 +142,17 @@ img {
   background: none;
   border: #999 solid;
   color: #999;
-  font-size: 1.1rem;
   font-weight: 700;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   margin-top: 1rem;
+  outline: none;
 }
 
 .btn-dark:hover {
-  background: none;
+  cursor: pointer;
+  color: #ccc;
 }
 
 .btn-bottom {
@@ -237,7 +240,7 @@ img {
 }
 
 .signup-tour-inner {
-  padding-top: 15rem;
+  margin-top: calc(250px * 2);
   text-align: center;
 }
 
@@ -265,24 +268,42 @@ img {
   background: #E50914;
   padding: 2px;
   border-radius: 100px;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
+  font-size: 9rem;
 }
 
-.signup-tour-inner .step-number {
-  color: black;
+@media (max-width: 2560px) {
+  .signup-tour-inner #check-icon-circle {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .signup-tour-inner #check-icon-circle {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .signup-tour-inner #check-icon-circle {
+    font-size: 2.5rem;
+    margin-bottom: .75rem;
+  }
+}
+
+.signup-tour-inner .text-md {
   margin-bottom: 0;
 }
 
 .signup-tour-inner .text-xl {
+  margin-top: 0;
   color: black;
 }
 
 .signup-tour-inner .text-black {
   margin-bottom: 2rem;
-}
-
-.signup-tour-inner .text-no-margin {
-  margin: 0;
 }
 
 .signup-tour-inner .tour-list {
@@ -302,6 +323,18 @@ img {
 
 .signup-tour-inner .btn-lg {
   width: 100%;
+}
+
+@media (max-width: 2560px) {
+  .signup-tour-inner {
+    margin-top: calc(150px * 2);
+  }
+}
+
+@media (max-width: 1920px) {
+  .signup-tour-inner {
+    margin-top: calc(90px * 2);
+  }
 }
 
 .icons-container {
@@ -330,41 +363,6 @@ img {
 
 .icons-container .tab-phone-icons-container .icon {
   margin: 0;
-}
-
-@media (max-width: 700px) {
-  .signup-page-2-top {
-    text-align: center;
-  }
-}
-
-.signup-page-2-inner {
-  margin-top: 91px;
-}
-
-.signup-page-2-inner p {
-  color: black;
-}
-
-.signup-page-2-inner .btn {
-  position: relative;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 300px;
-}
-
-.signup-page-2-inner .btn-blue {
-  color: white;
-  background: #0070eb;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2rem;
-  margin: 2rem 0 4rem;
-}
-
-.signup-page-2-inner .input-field-container {
-  background: #ddd;
 }
 
 .footer {
@@ -404,10 +402,19 @@ img {
   grid-gap: 2rem;
 }
 
-@media (max-width: 900px) {
-  .footer .footer-cols {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+.footer .footer-cols p {
+  margin: 4rem 0;
+}
+
+@media (max-width: 2560px) {
+  .footer .footer-cols p {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 1920px) {
+  .footer .footer-cols p {
+    margin: 0.5rem 0;
   }
 }
 
@@ -801,6 +808,50 @@ img {
           transform: translateY(-50%);
 }
 
+.signup-page-2-top {
+  margin-top: 250px;
+}
+
+@media (max-width: 2560px) {
+  .signup-page-2-top {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .signup-page-2-top {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .signup-page-2-top {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 700px) {
+  .signup-page-2-top {
+    text-align: center;
+  }
+}
+
+.signup-page-2-inner {
+  margin-top: 100px;
+}
+
+.signup-page-2-inner .btn {
+  position: relative;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 300px;
+}
+
+.signup-page-2-inner .input-field-container {
+  background: #ddd;
+}
+
 .signup-table {
   width: 100%;
   margin-top: 3rem;
@@ -815,36 +866,46 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #B20710;
+  background: #f97279;
   color: white;
   padding: 4rem;
   max-width: 10rem;
-  margin-bottom: 1rem;
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  border-radius: 10px;
+  margin: 0 0.5rem 1rem;
+  border-radius: 5px;
   outline: none;
   border: none;
   cursor: pointer;
 }
 
 .signup-table .btn-selection:hover {
-  background: #f6121d;
+  background: #E50914;
 }
 
 .signup-table .btn-active {
-  background: #f6121d;
+  background: #E50914;
 }
 
-.signup-table thead tr th {
+.signup-table thead tr:not(:first-child) {
   text-transform: uppercase;
   letter-spacing: 0.3ch;
-  padding: 0 .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .signup-table td {
-  padding: 0.8rem 1.2rem;
-  padding-left: 0;
+  padding: 0.8rem 1.2rem 0.8rem 0;
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -859,16 +920,69 @@ img {
   color: #999;
 }
 
+@media (max-width: 1920px) {
+  .signup-table {
+    margin-top: 3rem;
+    border-collapse: collapse;
+    border-spacing: 1rem 0;
+  }
+  .signup-table .btn-selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 4rem;
+    max-width: 10rem;
+    margin: 0 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .signup-table thead tr:not(:first-child) {
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .signup-table td {
+    padding: 0.8rem 1.2rem 0.8rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .signup-table td:nth-child(1) {
+    color: black;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  .signup-table td:not(:first-child) {
+    color: #999;
+  }
+}
+
 @media (max-width: 900px) {
   .signup-table thead tr th {
     padding: 0;
+    letter-spacing: 0;
   }
   .signup-table .btn-selection {
     position: relative;
-    margin-left: 2rem;
-    margin-right: 1rem;
     max-width: 8rem;
-    padding: 2rem;
+    padding: 3rem 4rem;
   }
   .signup-table td {
     padding: 0.4rem 0.6rem;
@@ -876,16 +990,14 @@ img {
 }
 
 @media (max-width: 700px) {
-  .signup-table thead tr th {
-    padding: 0;
-  }
   .signup-table .btn-selection {
-    left: 0rem;
-    max-width: 8rem;
+    left: 0;
+    max-width: 5.5rem;
     padding: 2rem;
+    margin: auto auto 0.5rem;
   }
   .signup-table td {
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 0;
   }
   .signup-table td:first-child {
     color: #999;
@@ -899,13 +1011,25 @@ img {
 }
 
 .text-xl {
-  font-size: 2rem;
+  font-size: 6rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 2560px) {
+  .text-xl {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .text-xl {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 900px) {
   .text-xl {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -928,18 +1052,30 @@ img {
 
 @media (max-width: 900px) {
   .text-lg {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 
 .text-md {
-  font-size: 1.3rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 2560px) {
+  .text-md {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .text-md {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 900px) {
   .text-md {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -963,6 +1099,10 @@ img {
 
 .text-dark {
   color: #999;
+}
+
+.text-dark:hover {
+  color: #ccc;
 }
 
 .text-white {
