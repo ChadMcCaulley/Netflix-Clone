@@ -9,6 +9,7 @@
 @import "./utilities/containers";
 @import "./utilities/footer";
 @import "./utilities/forms";
+@import "./utilities/icons";
 @import "./utilities/navbar";
 @import "./utilities/tables";
 @import "./utilities/text";
@@ -70,19 +71,19 @@
 
 // Input Fields
 .input-field-container {
+    background: map-get($colors, inputGrey);
     position: relative;
     margin-bottom: 1rem;
     height: 3rem;
     width: 100%;
     border-radius: 5px;
-    background: #fff;
     label {
         position: absolute;
         padding: 5px 20px;
         color: black;
     }
     input {
-        position: absolute;
+        position: relative;
         font-size: 1rem;
         width: 100%;
         height: 100%;

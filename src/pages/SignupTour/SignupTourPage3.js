@@ -14,11 +14,11 @@ const SignupTourPage3 = () => {
                 <form className="signup-tour-inner">
                     <div className="signup-tour-inner-top">
                         <div className="icons-container">
-                            <IoIosLaptop size={100} className="icon"/> 
-                            <FaTv size={100} className="icon"/>
+                            <IoIosLaptop className="icon"/> 
+                            <FaTv className="icon"/>
                             <div className="tab-phone-icons-container">
-                                <FaTabletAlt size={60} className="icon"/>
-                                <IoIosPhonePortrait size={40} className="icon"/>
+                                <FaTabletAlt className="icon icon-md" aria-hidden="true"/>
+                                <IoIosPhonePortrait className="icon icon-sm phone-icon" aria-hidden="true"/>
                             </div>
                         </div>
                         <p className="text-md text-black">

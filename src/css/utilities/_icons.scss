@@ -1,0 +1,83 @@
+.icon {
+    margin: 0 1.5rem;
+    align-self: center;
+    color: map-get($colors, brightRed);
+    font-size: 22rem;
+    @include respond-to(QHD) {
+        font-size: 18rem;
+        margin: 0 1rem;
+    }
+    @include respond-to(HD) {
+        font-size: 10rem;
+        margin: 0 0.75rem;
+    }
+    @include respond-to(mobile) {
+        font-size: 6rem;
+        margin: 0;
+    }
+}
+.icon-md {
+    font-size: 16rem;
+    margin-right: 0;
+    @include respond-to(QHD) {
+        font-size: 12rem;
+    }
+    @include respond-to(HD) {
+        font-size: 7rem;
+    }
+    @include respond-to(mobile) {
+        font-size: 4rem;
+        margin-left: 0;
+    }
+}
+.icon-sm {
+    font-size: 12rem;
+    margin: 0;
+    @include respond-to(QHD) {
+        font-size: 9rem;
+    }
+    @include respond-to(HD) {
+        font-size: 6rem;
+    }
+    @include respond-to(mobile) {
+        font-size: 2.75rem;
+    }
+}
+.phone-icon {
+    position: absolute;
+    margin-left: 12rem;
+    margin-top: 2.5rem;
+    @include respond-to(QHD) {
+        margin-left: 10rem;
+        margin-top: 2rem;
+    }
+    @include respond-to(HD) {
+        margin-left: 5.5rem;
+        margin-top: 0.8rem;
+    }
+    @include respond-to(mobile) {
+        margin-left: 2.8rem;
+        margin-top: 0.8rem;
+    }
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 8rem 0 0;
+    @include respond-to(HD) {
+        margin: 0 6rem 0 2rem;
+    }
+    @include respond-to(tablet){
+        margin: 0 5rem 0 1rem;
+    }
+    @include respond-to(mobile){
+        margin: 0 2.5rem 0 0.5rem;;
+    }
+}
+.tab-phone-icons-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

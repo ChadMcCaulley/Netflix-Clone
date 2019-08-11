@@ -129,7 +129,7 @@ export default class SignupTourPage2 extends Component {
                                 </tr>
                             </tbody>
                         </table>
-                        <p className="text-dark text-sm" style={{textAlign: "center"}}>
+                        <p className="text-sm" style={{color: "#999", textAlign:"center"}}>
                             HD and Ultra HD availability subject to your Internet service and device capabilities. Not all content available in HD or Ultra HD. 
                             <br/> See Terms of Use for more details.
                         </p>
