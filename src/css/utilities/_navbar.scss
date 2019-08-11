@@ -164,11 +164,32 @@
     flex-wrap: nowrap;
     align-items: center;
     padding: 0 28px;
-    height: 250px;
+    height: map-get($navHeights, UHD);
     width: 100%;
     #logo{
         width: map-get($logoWidths, UHD);
         margin-right: 1.5rem;
         transform: translateY(-50%);
+    }
+    @include respond-to(QHD){
+        height: map-get($navHeights, QHD);
+        #logo{
+            width: map-get($logoWidths, QHD);
+            margin-right: 1.5rem;
+        }
+    }
+    @include respond-to(HD){
+        height: map-get($navHeights, HD);
+        #logo{
+            width: map-get($logoWidths, HD);
+            margin-right: 1.5rem;
+        }
+    }
+    @include respond-to(tablet){
+        height: map-get($navHeights, tablet);
+        #logo{
+            width: map-get($logoWidths, mobile-small);
+            margin-right: 1.5rem;
+        }
     }
 }

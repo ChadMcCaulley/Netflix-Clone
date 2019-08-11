@@ -62,7 +62,26 @@ img {
   background: #0070eb;
   padding: 20px;
   text-align: center;
-  margin: 2rem 0 4rem;
+  margin: 0 0 8rem;
+}
+
+@media (max-width: 2560px) {
+  .btn-blue {
+    margin-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .btn-blue {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .btn-blue {
+    margin: 4rem 0 2rem;
+  }
 }
 
 .btn-rounded {
@@ -107,7 +126,7 @@ img {
 }
 
 .btn-lg {
-  font-size: 3rem;
+  font-size: 4rem;
   padding: 1.3rem 2rem;
   text-transform: uppercase;
 }
@@ -522,6 +541,17 @@ img {
   padding: 0;
 }
 
+.login-form-bottom-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login-form-bottom-new p {
+  margin-top: 0;
+  margin-right: 10px;
+}
+
 .login-form-bottom-icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -683,6 +713,66 @@ img {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.input-field-container {
+  background: #ddd;
+  position: relative;
+  margin-bottom: 1rem;
+  height: 10rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem 0;
+}
+
+.input-field-container label {
+  position: absolute;
+  margin-left: 1.5rem;
+  color: black;
+}
+
+.input-field-container input {
+  position: relative;
+  font-size: 4rem;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px 0;
+  border: none;
+  background: none;
+}
+
+.input-field-container input:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+}
+
+@media (max-width: 2560px) {
+  .input-field-container {
+    height: 7rem;
+    padding: 0.5rem 1rem 0;
+  }
+  .input-field-container input {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .input-field-container {
+    height: 4.5rem;
+    padding: 0.5rem .5rem 0;
+    border-radius: 0.75rem;
+  }
+  .input-field-container input {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .input-field-container {
+    height: 3.5rem;
+    padding: 0.3rem 0rem 0;
+    border-radius: 0.4rem;
+  }
 }
 
 .navbar-bottom {
@@ -927,24 +1017,63 @@ img {
           transform: translateY(-50%);
 }
 
+@media (max-width: 2560px) {
+  .nav-full {
+    height: 150px;
+  }
+  .nav-full #logo {
+    width: 400px;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .nav-full {
+    height: 90px;
+  }
+  .nav-full #logo {
+    width: 200px;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-full {
+    height: 75px;
+  }
+  .nav-full #logo {
+    width: 100px;
+    margin-right: 1.5rem;
+  }
+}
+
 .signup-page-2-top {
   margin-top: 250px;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 2560px) {
   .signup-page-2-top {
     margin-top: 150px;
+    margin-bottom: 3.5rem;
   }
 }
 
 @media (max-width: 1920px) {
   .signup-page-2-top {
     margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .signup-page-2-top {
+    text-align: center;
   }
 }
 
 .signup-page-2-inner {
-  margin-top: 100px;
+  margin-top: 1rem;
 }
 
 .signup-page-2-inner .btn {
@@ -1222,7 +1351,7 @@ img {
 
 @media (max-width: 2560px) {
   .text-xsm {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1235,6 +1364,12 @@ img {
 @media (max-width: 900px) {
   .text-xsm {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .text-xsm {
+    font-size: 0.6rem;
   }
 }
 
@@ -1728,7 +1863,7 @@ img {
 }
 
 .user-page-container {
-  margin-top: 30rem;
+  margin-top: 25rem;
 }
 
 .user-page-container .btn-xl {
@@ -1738,9 +1873,17 @@ img {
           transform: translateX(-50%);
 }
 
+.user-page-container .user-icons-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
 .user-page-container .user-icons {
   width: 30rem;
   height: 30rem;
+  margin: 0 2rem 10rem;
 }
 
 .user-page-container .user-icons:hover {
@@ -1756,71 +1899,64 @@ img {
   color: #999;
 }
 
+@media (max-width: 2560px) {
+  .user-page-container {
+    margin-top: 15rem;
+  }
+  .user-page-container .user-icons {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 1rem 6rem;
+  }
+  .user-page-container .user-icons:hover {
+    outline: 0.4rem solid #fff;
+  }
+  .user-page-container .user-icons:last-child {
+    margin-bottom: 8rem;
+  }
+}
+
 @media (max-width: 1920px) {
   .user-page-container {
-    margin-top: 20rem;
+    margin-top: 10rem;
   }
   .user-page-container .user-icons {
     width: 12rem;
     height: 12rem;
+    margin: 0 0.5rem 4rem;
   }
   .user-page-container .user-icons:hover {
     outline: 0.2rem solid #fff;
   }
+  .user-page-container .user-icons:last-child {
+    margin-bottom: 6rem;
+  }
 }
 
-.user-icons-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+@media (max-width: 900px) {
+  .user-page-container {
+    margin-top: 10rem;
+  }
+  .user-page-container .user-icons {
+    margin: 0 0.5rem 4rem;
+  }
 }
 
-.user-icons-container .user-icons {
-  margin: 0 1rem 8rem;
+@media (max-width: 700px) {
+  .user-page-container .user-icons {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
-.input-field-container {
-  background: #ddd;
-  position: relative;
-  margin-bottom: 1rem;
-  height: 3rem;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.input-field-container label {
-  position: absolute;
-  padding: 5px 20px;
-  color: black;
-}
-
-.input-field-container input {
-  position: relative;
-  font-size: 1rem;
-  width: 100%;
-  height: 100%;
-  padding: 15px 20px 0;
-  border: none;
-  background: none;
-}
-
-.login-form-bottom-new {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.login-form-bottom-new p {
-  margin-top: 0;
-  margin-right: 10px;
+@media (max-width: 540px) {
+  .user-page-container .user-icons-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .user-page-container .user-icons {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

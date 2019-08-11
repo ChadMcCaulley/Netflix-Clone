@@ -21,7 +21,17 @@
     background: map-get($colors, brightBlue);
     padding: 20px;
     text-align: center;
-    margin: 2rem 0 4rem;
+    margin: 0 0 8rem;
+    @include respond-to(QHD){
+        margin-bottom: 6rem;
+    }
+    @include respond-to(HD){
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+    @include respond-to(tablet){
+        margin: 4rem 0 2rem;
+    }
 }
 .btn-rounded {
     border-radius: 5px;
@@ -48,7 +58,7 @@
     }
 }
 .btn-lg {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 1.3rem 2rem;
     text-transform: uppercase;
     @include respond-to(QHD){

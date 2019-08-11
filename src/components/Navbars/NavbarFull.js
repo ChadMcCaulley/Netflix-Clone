@@ -16,7 +16,7 @@ export default function NavbarFull({logoOnly}) {
             {logoOnly === "false" && (
                 <div>
                     <div className="nav-full-container">
-                        <Link to="/"><img src={Logo_Full} alt="NETFLIX" className="logo"/></Link>
+                        <Link to="/"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
                         <Link to="/browse/home" className="nav-link text-sm">
                             Home
                         </Link>

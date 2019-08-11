@@ -39,6 +39,18 @@ export default class UserPage extends Component {
                                     User 4
                                 </p>
                             </Link>
+                            <Link to="/browse" className="user-icons">
+                                <img src={userIcon} alt="user-icon"/>
+                                <p className="text-lg">
+                                    User 5
+                                </p>
+                            </Link>
+                            <Link to="/browse" className="user-icons">
+                                <img src={userIcon} alt="user-icon"/>
+                                <p className="text-lg">
+                                    User 6
+                                </p>
+                            </Link>
                         </div>
                         <Link to="/manage-account" className="btn btn-xl">
                             Manage Accounts

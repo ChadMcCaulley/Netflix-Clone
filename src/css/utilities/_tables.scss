@@ -1,16 +1,22 @@
 // Tables
 .signup-page-2-top{
     margin-top: map-get($navHeights, UHD);
+    margin-bottom: 5rem;
     @include respond-to(QHD){
         margin-top: map-get($navHeights, QHD);
+        margin-bottom: 3.5rem;
     }
     @include respond-to(HD){
         margin-top: 0;
+        margin-bottom: 2rem;
+    }
+    @include respond-to(mobile){
+        text-align: center;
     }
 }
 
 .signup-page-2-inner {
-    margin-top: 100px;
+    margin-top: 1rem;
     .btn {
         position: relative;
         margin-left: 50%;

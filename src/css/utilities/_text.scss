@@ -65,7 +65,7 @@
     font-size: 2rem;
     margin-bottom: .5rem;
     @include respond-to(QHD){
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     @include respond-to(HD){
         font-size: 0.7rem;
@@ -73,6 +73,9 @@
     @include respond-to(half-HD){
         font-size: 0.8rem;
     }  
+    @include respond-to(mobile){
+        font-size: 0.6rem;
+    }
 }
 .text-center {
     text-align: center;
