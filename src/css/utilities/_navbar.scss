@@ -125,9 +125,15 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: map-get($navHeights, HD);
+    height: map-get($navHeights, UHD);
     @include respond-to(QHD){
-        
+        height: map-get($navHeights, QHD);
+    }
+    @include respond-to(HD){
+        height: map-get($navHeights, HD);
+    }
+    @include respond-to(half-HD){
+        height: map-get($navHeights, mobile-small);
     }
 }
 .nav-full-container-inner {
@@ -138,8 +144,8 @@
     align-content: center;
     width: 100%;
     #logo{
-        width: 200px;
-        margin-right: 2rem;
+        width: map-get($logoWidths, UHD);
+        margin-right: 4rem;
     }
     .nav-link {
         margin-right: 1rem;
@@ -148,7 +154,7 @@
             color: #999;
         }
     }
-    .text-sm {
+    .text-md {
         margin-bottom: 0;
     }
     .nav-icon {
@@ -165,5 +171,24 @@
         height: 2.5rem;
         align-self: center;
         min-width: 2.5rem;
+    }
+    @include respond-to(QHD){
+        #logo{
+            width: map-get($logoWidths, QHD);
+            margin-right: 3rem;
+        }
+    }
+    @include respond-to(HD){
+        #logo{
+            width: map-get($logoWidths, HD);
+            margin-right: 2rem;
+        }
+    }
+    @include respond-to(half-HD){
+        #logo{
+            margin-top: 6.545px;
+            width: map-get($logoWidths, mobile-small);
+            margin-right: 1rem;
+        }
     }
 }

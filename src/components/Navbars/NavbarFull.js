@@ -17,19 +17,19 @@ export default function NavbarFull({logoOnly}) {
                 <div>
                     <div className="nav-full-container-inner">
                         <Link to="/"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
-                        <Link to="/browse/home" className="nav-link text-sm">
+                        <Link to="/browse/home" className="nav-link text-md">
                             Home
                         </Link>
-                        <Link to="/browse/tv-shows" className="nav-link text-sm">
+                        <Link to="/browse/tv-shows" className="nav-link text-md">
                             TV Shows
                         </Link>
-                        <Link to="/browse/movies" className="nav-link text-sm">
+                        <Link to="/browse/movies" className="nav-link text-md">
                             Movies
                         </Link>
-                        <Link to="/browse/recently-added" className="nav-link text-sm">
+                        <Link to="/browse/recently-added" className="nav-link text-md">
                             Recently Added
                         </Link>
-                        <Link to="/browse/my-list" className="nav-link text-sm">
+                        <Link to="/browse/my-list" className="nav-link text-md">
                             My List
                         </Link>
                         <IoIosSearch className="nav-icon" id="search-icon"/>

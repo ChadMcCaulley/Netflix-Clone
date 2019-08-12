@@ -1079,7 +1079,25 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  height: 90px;
+  height: 250px;
+}
+
+@media (max-width: 2560px) {
+  .nav-full-container-outer {
+    height: 150px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .nav-full-container-outer {
+    height: 90px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-full-container-outer {
+    height: 60px;
+  }
 }
 
 .nav-full-container-inner {
@@ -1097,8 +1115,8 @@ img {
 }
 
 .nav-full-container-inner #logo {
-  width: 200px;
-  margin-right: 2rem;
+  width: 600px;
+  margin-right: 4rem;
 }
 
 .nav-full-container-inner .nav-link {
@@ -1112,7 +1130,7 @@ img {
   color: #999;
 }
 
-.nav-full-container-inner .text-sm {
+.nav-full-container-inner .text-md {
   margin-bottom: 0;
 }
 
@@ -1136,6 +1154,28 @@ img {
       -ms-grid-row-align: center;
       align-self: center;
   min-width: 2.5rem;
+}
+
+@media (max-width: 2560px) {
+  .nav-full-container-inner #logo {
+    width: 400px;
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 1920px) {
+  .nav-full-container-inner #logo {
+    width: 200px;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-full-container-inner #logo {
+    margin-top: 6.545px;
+    width: 100px;
+    margin-right: 1rem;
+  }
 }
 
 .signup-page-2-top {
@@ -1978,7 +2018,10 @@ img {
 
 .show-carousel-container-outer {
   margin-bottom: 4rem;
-  margin-left: 4rem;
+}
+
+.show-carousel-container-outer p {
+  margin-left: 8rem;
 }
 
 .show-carousel-container-inner {
