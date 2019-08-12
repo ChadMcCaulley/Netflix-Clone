@@ -49,147 +49,121 @@
             text-decoration: underline;
         }
     }
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         height: map-get($navHeights, QHD);
         #logo {
             width: map-get($logoWidths, QHD);
             margin-left: 14rem;
         }
-        .logo-alone{
-            margin-left: 0rem;
+        .logo-alone {
+            margin-left: 0;
         }
         p {
             margin-left: auto;
         }
-        .signin-light{
+        .signin-light {
             font-size: 2.5rem;
         }
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         height: map-get($navHeights, HD);
         #logo {
             width: map-get($logoWidths, HD);
             margin-left: 7rem;
         }
-        .signin-light{
+        .signin-light {
             font-size: 1.4rem;
         }
     }
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
         height: map-get($navHeights, tablet);
         p {
             margin-left: auto;
         }
     }
-    @include respond-to(mobile-small){
+    @include respond-to(mobile-small) {
         height: map-get($navHeights, mobile-small);
         #logo {
             width: map-get($logoWidths, mobile-small);
             margin-left: 3.5rem;
         }
-        .signin-light{
+        .signin-light {
             font-size: 1rem;
             margin-top: 5px;
         }
     }
 }
 
-.error-page .nav-black{
+.error-page .nav-black {
     background: black;
     width: 100%;
     height: map-get($navHeights, UHD);
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         height: map-get($navHeights, QHD);
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         height: map-get($navHeights, HD);
     }
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
         height: map-get($navHeights, tablet);
     }
-    @include respond-to(mobile-small){
+    @include respond-to(mobile-small) {
         height: map-get($navHeights, mobile-small);
     }
 }
 .nav-light {
     border-bottom: 2px solid rgba(0,0,0,0.2);
-    @include respond-to(HD){
+    @include respond-to(HD) {
         border-bottom: 1px solid rgba(0,0,0,0.2);
     }
 }
 
-.nav-full-container{
+.nav-full-container-outer {
+    z-index: 10;
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: map-get($navHeights, HD);
+    @include respond-to(QHD){
+        
+    }
+}
+.nav-full-container-inner {
     position: absolute;
+    padding: 20px;
     display: flex;
     justify-content: flex-start;
     align-content: center;
-    bottom: 50%;
-    top: 50%;
     width: 100%;
-    .nav-link{
+    #logo{
+        width: 200px;
+        margin-right: 2rem;
+    }
+    .nav-link {
         margin-right: 1rem;
         align-self: center;
-        &:hover{
+        &:hover {
             color: #999;
         }
     }
-    .nav-link:last-child{
-        margin-right: 500px;
-    }
-    .text-sm{
+    .text-sm {
         margin-bottom: 0;
     }
-    .nav-icon{
-        color: white;
-        font-size: 1.75rem;
-        transform: translate(-50%, -50%);
-        margin-right: 0rem;
+    .nav-icon {
+        color: #fff;
+        align-self:center;  
+        font-size: 2rem;
+        margin-right: 1rem;
     }
-    #search-icon{
+    #search-icon {
         margin-left: auto;
-        margin-right: 1rem; 
     }
-    .nav-user-icon{
-        margin-right: 3rem;
+    #user-icon {
         width: 2.5rem;
         height: 2.5rem;
         align-self: center;
-    }
-}
-
-.nav-full{
-    z-index: 10;
-    display: flex;
-    position: fixed;
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 0 28px;
-    height: map-get($navHeights, UHD);
-    width: 100%;
-    #logo{
-        width: map-get($logoWidths, UHD);
-        margin-right: 1.5rem;
-        transform: translateY(-50%);
-    }
-    @include respond-to(QHD){
-        height: map-get($navHeights, QHD);
-        #logo{
-            width: map-get($logoWidths, QHD);
-            margin-right: 1.5rem;
-        }
-    }
-    @include respond-to(HD){
-        height: map-get($navHeights, HD);
-        #logo{
-            width: map-get($logoWidths, HD);
-            margin-right: 1.5rem;
-        }
-    }
-    @include respond-to(tablet){
-        height: map-get($navHeights, tablet);
-        #logo{
-            width: map-get($logoWidths, mobile-small);
-            margin-right: 1.5rem;
-        }
+        min-width: 2.5rem;
     }
 }

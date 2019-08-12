@@ -14,6 +14,7 @@ export default class UserPage extends Component {
                 <NavbarFull logoOnly="true"/>
                 <div className="center-content-container">
                     <div className="user-page-container">
+                        <h1 className="text-xxl text-white"> Who's Watching?</h1>
                         <div className="user-icons-container">
                             <Link to="/browse" className="user-icons">
                                 <img src={userIcon} alt="user-icon"/>
@@ -46,13 +47,13 @@ export default class UserPage extends Component {
                                 </p>
                             </Link>
                             <Link to="/browse" className="user-icons">
-                                <img src={userIcon} alt="user-icon"/>
+                                <img src={userIcon2} alt="user-icon"/>
                                 <p className="text-lg">
                                     User 6
                                 </p>
                             </Link>
                         </div>
-                        <Link to="/manage-account" className="btn btn-xl">
+                        <Link to="/manage-account" className="btn btn-xl btn-dark">
                             Manage Accounts
                         </Link>
                     </div>

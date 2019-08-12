@@ -51,7 +51,7 @@ export default class SignupTourPage2 extends Component {
                 <div className="white-background"></div>
                 <div className="center-content-container">
                     <NavbarLight logoLink="/" btnText="Sign In" btnLink="/signin-existing"/>
-                    <form className="signup-page-2-inner">
+                    <form className="signup-page-2-inner signup-page-2">
                         <div className="signup-page-2-top">
                             <p className="text-md text-black">
                                 Step <strong>1</strong> of <strong>3</strong>

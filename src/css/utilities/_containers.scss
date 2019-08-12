@@ -112,3 +112,99 @@
     }
 }
 
+// Containers
+.user-page-container{
+    margin-top: 30rem;
+    .btn-xl{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .user-icons-container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .user-icons{
+        width: 30rem;
+        height: 30rem;
+        margin: 0 2rem 20rem;
+        outline: 0.8rem solid #333; 
+        &:hover{
+            outline: 0.8rem solid #fff; 
+            p{
+                color: #fff;
+            }  
+        }
+    }
+    h1{
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        color: #999;
+    }
+    @include respond-to(QHD){
+        margin-top: 18rem;
+        .user-icons{
+            width: 20rem;
+            height: 20rem;
+            margin: 0 1rem 10rem;
+            outline: 0.4rem solid #333; 
+            &:hover{
+                outline: 0.4rem solid #fff; 
+            }
+        }
+    }
+    @include respond-to(HD){
+        margin-top: 12rem;
+        .user-icons{
+            width: 12rem;
+            height: 12rem;
+            margin: 0 0.5rem 8rem;
+            outline: 0.2rem solid #333; 
+            &:hover{
+                outline: 0.2rem solid #fff; 
+            }
+        }
+    }
+    @media(max-width: 1250px){
+        margin-top: 8rem;
+        .user-icons-container{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .user-icons{
+            margin: 0 1rem 5rem;
+        }
+    }
+    @include respond-to(half-HD){
+        .user-icons{
+            margin: 0 0.5rem 4rem;
+        }
+    }
+    @include respond-to(tablet){
+        margin-top: 5rem;
+        .user-icons{
+            width: 10rem;
+            height: 10rem;
+            margin: 0 .75rem 5rem;
+        }
+    }
+    @include respond-to(mobile){
+        .user-icons-container{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .user-icons{
+            margin-bottom: 3rem;
+        }
+        .user-icons:last-child{
+            margin-bottom: 3rem;
+        }
+    }
+    @include respond-to(mobile-small){
+        .user-icons{
+            width: 10rem;
+            height: 10rem;
+            margin: 0 .5rem 3rem;
+        }
+    }
+}

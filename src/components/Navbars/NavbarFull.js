@@ -7,15 +7,15 @@ import {IoIosSearch, IoIosNotifications} from "react-icons/io";
 
 export default function NavbarFull({logoOnly}) {
     return (
-        <nav className="nav-full">
+        <nav className="nav-full-container-outer">
             {logoOnly === "true" && (
-                <div className="nav-full-container">
-                    <Link to="/" className="nav-full-logo-only"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
+                <div className="nav-full-container-inner">
+                    <Link to="/"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
                 </div>
             )}
             {logoOnly === "false" && (
                 <div>
-                    <div className="nav-full-container">
+                    <div className="nav-full-container-inner">
                         <Link to="/"><img src={Logo_Full} alt="NETFLIX" id="logo"/></Link>
                         <Link to="/browse/home" className="nav-link text-sm">
                             Home
@@ -34,7 +34,7 @@ export default function NavbarFull({logoOnly}) {
                         </Link>
                         <IoIosSearch className="nav-icon" id="search-icon"/>
                         <IoIosNotifications className="nav-icon"/>
-                        <div className="nav-user-icon"><img src={userIcon} alt="icon"/></div>
+                        <div id="user-icon"><img src={userIcon} alt="icon"/></div>
                     </div>
                 </div>
             )}

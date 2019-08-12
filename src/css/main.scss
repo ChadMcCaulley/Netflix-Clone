@@ -6,6 +6,7 @@
 @import "./constants/values";
 
 @import "./utilities/buttons";
+@import "./utilities/backgrounds";
 @import "./utilities/containers";
 @import "./utilities/footer";
 @import "./utilities/forms";
@@ -17,91 +18,31 @@
 
 @import "./pages/landingPage";
 
-.white-background {
-    z-index: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
+
+.show-option-container{
+    margin-right: .3rem;
+    width: 17rem;
+    .show-option-logo{
+        position: absolute;
+        width: 1rem;
+        margin: .25rem 0 0 .25rem;
+    }
+    .show-option-image{
+        height: 10rem;
+    }
+}
+.show-carousel-container-outer{
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+}
+.show-carousel-container-inner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.show-carousel-container-outer:first-child{
+    margin-top: 10rem;
 }
 
-// Containers
-.user-page-container{
-    margin-top: 25rem;
-    .btn-xl{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .user-icons-container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .user-icons{
-        width: 30rem;
-        height: 30rem;
-        margin: 0 2rem 10rem;
-        &:hover{
-            outline: 0.8rem solid #fff; 
-            p{
-                color: #fff;
-            }  
-        }
-    }
-    p {
-        text-align: center;
-        color: #999;
-    }
-    @include respond-to(QHD){
-        margin-top: 15rem;
-        .user-icons{
-            width: 20rem;
-            height: 20rem;
-            margin: 0 1rem 6rem;
-            &:hover{
-                outline: 0.4rem solid #fff; 
-            }
-        }
-        .user-icons:last-child{
-            margin-bottom: 8rem;
-        }
-    }
-    @include respond-to(HD){
-        margin-top: 10rem;
-        .user-icons{
-            width: 12rem;
-            height: 12rem;
-            margin: 0 0.5rem 4rem;
-            &:hover{
-                outline: 0.2rem solid #fff; 
-            }
-        }
-        .user-icons:last-child{
-            margin-bottom: 6rem;
-        }
-    }
-    @include respond-to(half-HD){
-        margin-top: 10rem;
-        .user-icons{
-            margin: 0 0.5rem 4rem;
-        }
-    }
-    @include respond-to(tablet){
-        .user-icons{
-            width: 8rem;
-            height: 8rem;
-        }
-    }
-    @include respond-to(mobile){
-        .user-icons-container{
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .user-icons{
-            width: 8rem;
-            height: 8rem;
-        }
-    }
-}
+
 
