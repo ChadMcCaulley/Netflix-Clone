@@ -7,10 +7,12 @@ export default class NetflixMainPage extends Component {
         return (
             <div>
                 <NavbarFull logoOnly="false"/>
-                <div><ShowSelectMenu/>
-                <ShowSelectMenu/>
-                <ShowSelectMenu/></div>
-                
+                <div>
+                    <ShowSelectMenu/>
+                    <ShowSelectMenu/>
+                    <ShowSelectMenu/>
+                </div>
+
             </div>
         )
     }

@@ -2002,26 +2002,89 @@ img {
 }
 
 .show-option-container {
-  margin-right: .3rem;
-  width: 17rem;
+  margin-right: 0.2rem;
+  width: 20rem;
 }
 
 .show-option-container .show-option-logo {
+  display: none;
   position: absolute;
   width: 1rem;
-  margin: .25rem 0 0 .25rem;
+  margin: 0.25rem 0 0 0.25rem;
 }
 
 .show-option-container .show-option-image {
   height: 10rem;
 }
 
-.show-carousel-container-outer {
-  margin-bottom: 4rem;
+.show-option-container .show-hover-container {
+  display: none;
 }
 
-.show-carousel-container-outer p {
+.show-option-container:hover {
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+  margin: 0 6.5rem;
+}
+
+.show-option-container:hover .show-hover-container {
+  display: block;
+}
+
+.show-option-container:hover .show-info-container {
+  padding-left: 0.5rem;
+  position: absolute;
+  display: inline-block;
+  max-width: 16rem;
+  top: 35%;
+  left: 0;
+}
+
+.show-option-container:hover .show-info-container .text-sm,
+.show-option-container:hover .show-info-container .text-xsm {
+  margin-bottom: 0;
+}
+
+.show-option-container:hover .show-info-container .text-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.show-option-container:hover .show-info-container #play-icon {
+  font-size: 1.5rem;
+  color: black;
+  background: #E50914;
+  -webkit-box-shadow: 0 0 3px 1px #E50914;
+          box-shadow: 0 0 3px 1px #E50914;
+  border-radius: 1rem;
+}
+
+.show-option-container:hover .show-buttons-container {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 25%;
+  margin-right: 1rem;
+}
+
+.show-option-container:hover .show-buttons-container .show-select-icon {
+  margin-bottom: 0.8rem;
+}
+
+.show-carousel-container-outer {
+  margin-bottom: 4rem;
   margin-left: 8rem;
+}
+
+.show-carousel-container-outer #carousel-title {
+  margin-left: 0.5rem;
 }
 
 .show-carousel-container-inner {

@@ -104,7 +104,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="footer-language-select">
-                <button className="btn-lg btn-dark btn-options"><FaGlobe className="icon"/> English</button>
+                <button className="btn-lg btn-dark btn-options"><FaGlobe/> English</button>
             </div>
         </footer>
     )
