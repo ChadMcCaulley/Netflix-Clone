@@ -1,85 +1,98 @@
 // TEXT
-.text-xxl{
+.text-xxl {
     font-size: 10rem;
     margin-bottom: 3rem;
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         font-size: 8rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 4.5rem;
     }
-    @include respond-to(half-HD){
+    @include respond-to(half-HD) {
         font-size: 3rem;
     }
 }
 .text-xl {
     font-size: 6rem;
     margin-bottom: 1rem;
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         font-size: 4rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 3rem;
     }
-    @include respond-to(half-HD){
+    @include respond-to(half-HD) {
         font-size: 2rem;
     }
 }
 .text-lg {
     font-size: 5rem;
     margin-bottom: 1rem;
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         font-size: 3rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 2rem;
     }
-    @include respond-to(tablet){
+    @include respond-to(tablet) {
         font-size: 1.5rem;
     }
 }
 .text-md {
     font-size: 3rem;
     margin-bottom: 1rem;
-    @include respond-to(QHD){
+    @include respond-to(QHD) {
         font-size: 2rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 1.2rem;
     }
-    @include respond-to(half-HD){
+    @include respond-to(half-HD) {
         font-size: 1rem;
     }
 }
-.text-table{
+.text-table {
     font-size: 1.1rem;
 }
 .text-sm {
     font-size: 2.5rem;
-    margin-bottom: .8rem;
-    @include respond-to(QHD){
+    margin-bottom: 0.8rem;
+    @include respond-to(QHD) {
         font-size: 1rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 0.9rem;
     }
-    @include respond-to(half-HD){
+    @include respond-to(half-HD) {
         font-size: 0.8rem;
-    }      
-    @include respond-to(tablet){
+    }
+    @include respond-to(tablet) {
         font-size: 0.6rem;
-    }    
+    }
 }
 .text-xsm {
     font-size: 2rem;
-    margin-bottom: .5rem;
-    @include respond-to(QHD){
+    margin-bottom: 0.5rem;
+    @include respond-to(QHD) {
         font-size: 1.4rem;
     }
-    @include respond-to(HD){
+    @include respond-to(HD) {
         font-size: 0.7rem;
     }
-    @include respond-to(mobile){
+    @include respond-to(mobile) {
+        font-size: 0.6rem;
+    }
+}
+.text-video-content {
+    font-size: 2rem;
+    margin: 0;
+    @include respond-to(QHD) {
+        font-size: 1.4rem;
+    }
+    @include respond-to(HD) {
+        font-size: 0.6rem;
+    }
+    @include respond-to(mobile) {
         font-size: 0.6rem;
     }
 }
@@ -88,22 +101,34 @@
 }
 .text-dark {
     color: #999;
-    &:hover{
+    &:hover {
         color: #ccc;
     }
 }
-.text-white{
+.text-white {
     color: #FFF;
+}
+.text-green {
+    color: rgb(11, 189, 20);
 }
 .text-black {
     color: #000;
 }
-.text-extra-heavy{
-    font-weight: 900px;
+.text-extra-heavy {
+    font-weight: 900;
 }
-.text-heavy{
-    font-weight: 700px;
+.text-heavy {
+    font-weight: 700;
 }
-.text-bold{
-    font-weight: bold;
+.text-bold {
+    font-weight: 1000;
+}
+.text-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: .25rem;
+    p{
+        margin: 0;
+    }
 }
