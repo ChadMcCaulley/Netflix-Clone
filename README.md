@@ -1,7 +1,5 @@
-# Netflix
+# Netflix-Frontend
 
-A clone of netflix using react. The IMDB API will be used to populate the shows and search functionality will be added. 
+The frontend portion of the Netflix clone.
 
-User will be created and signing in will be enforced
-
-A guest signin will be added for ease of examination
+A React based app that relies upon SASS for styling.
