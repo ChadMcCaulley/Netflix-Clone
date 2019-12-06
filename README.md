@@ -1,5 +1,4 @@
 # Netflix-Frontend
 
-The frontend portion of the Netflix clone.
-
-A React based app that relies upon SASS for styling.
+A react and sass based netflix clone
+The goal of this project is to improve my ability to produce a responsive site without a style framework
